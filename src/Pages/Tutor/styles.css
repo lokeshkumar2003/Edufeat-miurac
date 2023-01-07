@@ -1,0 +1,70 @@
+.expert .mantine-Stepper-stepBody {
+  padding: 1rem 2rem;
+  width: 400px;
+  color: #4a4a68;
+  border-radius: 30px;
+  background: #ffffff;
+  box-shadow: 0px 0px 20px rgba(56, 183, 255, 0.1);
+  border-radius: 30px;
+  min-height: 100px;
+}
+.expert .mantine-Stepper-stepLabel {
+  color: #0a2540;
+  margin-bottom: 1rem;
+  font-size: 1rem;
+}
+.expert .mantine-Stepper-stepDescription {
+  font-weight: 400;
+  font-size: 1rem;
+  line-height: 1.5rem;
+
+  color: #4a4a68;
+}
+
+.expert .mantine-Stepper-step.active .mantine-Stepper-stepBody {
+  background: linear-gradient(92.23deg, #00bffc 0%, #0094ff 102.83%);
+}
+
+.expert .mantine-Stepper-step.active .mantine-Stepper-stepLabel,
+.expert .mantine-Stepper-step.active .mantine-Stepper-stepDescription {
+  color: #ffffff;
+}
+.mantine-Accordion-item {
+  padding: 0.5rem;
+}
+.benefitCard {
+  background: #ffffff;
+  box-shadow: 0px 15px 45px rgba(150, 207, 255, 0.25);
+  border-radius: 30px;
+  width: 30rem;
+}
+.subjectCard {
+  background: #ffffff;
+  box-shadow: 0px 9px 26px rgba(128, 140, 255, 0.15);
+  border-radius: 30px;
+  width: 349px;
+  height: 8rem;
+}
+.expertStepsCard {
+  background: linear-gradient(92.23deg, #00bffc 0%, #0094ff 102.83%);
+  box-shadow: 0px 25px 45px 2px rgba(0, 168, 254, 0.25);
+  border-radius: 30px;
+  aspect-ratio: 3/2;
+}
+.colorText {
+  transform: rotateZ(45deg);
+  background-color: pink;
+  transform: rotateY(80deg);
+  width:100px !important;
+}
+
+@media only screen and (max-width: 600px) {
+  .expert .mantine-Stepper-stepBody {
+    width: 70vw;
+  }
+
+  .benefitCard {
+    width: 70vw;
+    min-height: 350px;
+  }
+}
