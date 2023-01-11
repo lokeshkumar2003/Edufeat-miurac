@@ -18,7 +18,7 @@ export const SubjectPageCard = (props: SubjectPageCardProps) => {
         </div>
       </div>
 
-      <div className='text-gray font-medium p-1 text-xl text-center w-55 '>
+      <div className='text-gray font-normal px-16 text-xl text-left w-55 '>
         {subjectContent.map((sub, index) => (
           <div>{sub.name}</div>
         ))}

@@ -31,9 +31,9 @@ export const SubjectPageData = [
         {name:'Calculus II'},
         {name:'Calculus III'},
         {name:'Differential Equation'},
-        {name:'namenear Algebra'},
+        {name:'Linear Algebra'},
         {name:'Trigonometry'},
-        {name:'Appnameed Mathematics'},
+        {name:'Applied Mathematics'},
         {name:'Geometry'}
       ]
     },

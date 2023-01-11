@@ -29,14 +29,14 @@ export default function PopularAmongStudents() {
     <div className='bg-lightSkyBlue py-20'>
       <Content>
         <div className='items-center'>
-          <div className='text-primary heading font-semibold text-center mb-16'>
+          <div className='text-primary  font-semibold text-center mb-16 text-[42px]'>
             We are we popular among students for
           </div>
           <div className='flex md:w-4/5 mx-auto flex-wrap gap-6 justify-center align-center '>
             {popularAmongStudentsData.map((item) => (
               <div className='flex md:w-[400px] w-[350px] py-4 px-4 gap-6 bg-white rounded-lg  '>
-                <img className='h-5 text-sm' src={completeokacceptgoodtick} alt='completedimg' />
-                <div className='flex'>{item.description}</div>
+                <img className='h-6 w-6' src={completeokacceptgoodtick} alt='completedimg' />
+                <div className='flex text-sm'>{item.description}</div>
               </div>
             ))}
           </div>

@@ -25,7 +25,7 @@ export default function AboutGoals() {
             <div className={`max-w-4xl ${i % 2 ? 'md:ml-auto' : ''} `}>
               <div className='heading text-primary my-10'>{about.title} </div>
 
-              <div className='shadow-card bg-white rounded-3xl py-4 px-10 min-h-[100px]'>
+              <div className='shadow-card text-base font-normal text-justify text-gray bg-white rounded-3xl py-[40px] px-[87px]'>
                 {about.discription}
               </div>
             </div>

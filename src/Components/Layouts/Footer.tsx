@@ -32,18 +32,18 @@ export default function Footer() {
     <div className='  bg-darkblue  py-10 text-sm'>
       <Content>
         <div className=''>
-          <div className='flex flex-col md:flex-row gap-8 flex-wrap'>
+          <div className='flex flex-col md:flex-row gap-6 flex-wrap'>
             <div className='flex-1 text-center md:text-left '>
-              <div className='w-64  mx-auto md:mx-0'>
+              <div className='w-64 py-[59px] mx-auto md:mx-0 '>
                 <img src={logo} alt='logo' />
               </div>
-              <div className='w-64  mx-auto md:mx-0 text-white'>
+              <div className='w-64 pt-[15px]  mx-auto md:mx-0 text-white'>
                 Office 901, 9th Floor, Ergo Tower, Sector V, Salt lake 700091
               </div>
             </div>
 
-            <div className=''>
-              <div className='flex md:gap-20 gap-4 flex-col md:flex-row items-start'>
+            <div className='py-[95px] '>
+              <div className='flex md:gap-20  flex-col md:flex-row items-start'>
                 {footerItems.map((arr, i) => (
                   <div className='w-full'>
                     <div className='ul list-none grid gap-4 '>
@@ -64,10 +64,8 @@ export default function Footer() {
 
                 <div className='grid gap-4 w-full '>
                   <div className='grid gap-4 order-last md:order-first w-64 md:w-full mx-auto  text-base'>
-                    <div className='flex gap-2  text-white '>
-                      <span>
-                        <AiOutlineMail size={20} />
-                      </span>
+                    <div className='flex gap-1  text-white flex-row'>
+                      <AiOutlineMail size={20} />
                       Email: support@edufeat.com
                     </div>
                     <div className=''>
@@ -78,7 +76,7 @@ export default function Footer() {
                       <span>
                         <IoCallOutline size={20} />
                       </span>
-                      Phone: +91-8240014127
+                      Phone:+91-8240014127
                     </div>
                   </div>
                   <div className='flex justify-center md:justify-start '>
