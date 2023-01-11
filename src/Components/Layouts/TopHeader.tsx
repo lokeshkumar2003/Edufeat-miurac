@@ -14,7 +14,7 @@ export default function TopHeader() {
       <Link to="/tutor">
       <div>
           <div className="flex items-center flex-end gap-2 ">
-            <img src={person} alt="person" className="pt-2"></img>
+            <img src={person} alt="person" className="pt-2 w-[20px] h-[20px]"></img>
             <div className="font-semibold text-white pt-2 2xl:hidden ">Become a Tutor</div>
           </div>
         </div>

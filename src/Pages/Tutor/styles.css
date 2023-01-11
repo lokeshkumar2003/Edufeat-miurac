@@ -29,6 +29,9 @@
 .expert .mantine-Stepper-step.active .mantine-Stepper-stepDescription {
   color: #ffffff;
 }
+.expert .mantine-Stepper-seperator{
+  width: 10px;
+}
 .mantine-Accordion-item {
   padding: 0.5rem;
 }

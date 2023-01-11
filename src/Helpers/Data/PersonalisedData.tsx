@@ -3,7 +3,7 @@ import testTube from '../../Assets/testTubes.svg'
 import analyticsReport from '../../Assets/analyticsReport.svg'
 import bookLibrary from '../../Assets/bookLibrary.svg'
 import paperSheet from '../../Assets/paperSheet.svg'
-import liveSession from "../../Assets/liveSession.svg";
+import liveSession2 from "../../Assets/liveSession2.svg";
 import notebook from '../../Assets/notebook.svg'
 export const personalisedData = [
   {
@@ -13,7 +13,7 @@ export const personalisedData = [
     color: '#00BFFC',
   },
   {
-    img: liveSession,
+    img: liveSession2,
     title: 'Live Session',
     description:
       'Take live help from experts who can help you with the most complex problems with step by step solutions.',
