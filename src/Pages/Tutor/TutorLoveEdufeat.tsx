@@ -11,6 +11,7 @@ import person8 from "../../Assets/person8.svg";
 import person9 from "../../Assets/person9.svg";
 import { createStyles } from "@mantine/core";
 import Autoplay from "embla-carousel-autoplay";
+import Content from "../../Components/Layouts/Content";
 
 const useStyles = createStyles((_theme, _params, getRef) => ({
   controls: {
@@ -30,34 +31,35 @@ const useStyles = createStyles((_theme, _params, getRef) => ({
 }));
 export default function TutorLoveEdufeat() {
   const { classes } = useStyles();
-  const autoplay = useRef(Autoplay({ delay: 4000 }));
+  const autoplay = useRef(Autoplay({ delay: 5000 }));
   return (
     <div className="bg-lightbg">
       <div className="font-sans font-semibold text-[42px] pt-[90px] text-center text-primary ">
         Tutors Love Edufeat
       </div>
-      <div className="flex items-center justify-center">
+      <div className="flex max-w-[1440px] mx-auto ">
         <Carousel
           mx="auto"
           loop
           align="center"
           withIndicators
+          slideSize="100%"
           draggable={false}
           classNames={classes}
           plugins={[autoplay.current]}
           onMouseEnter={autoplay.current.stop}
           onMouseLeave={autoplay.current.reset}
           styles={{
-            indicator:{
-                width:15,
-                height:15
-            }
+            indicator: {
+              width: 15,
+              height: 15,
+            },
           }}
-          
+          slideGap={"lg"}
         >
           <Carousel.Slide>
-            <div className="flex ">
-              <img src={person1}  alt="person" />
+            <div className="flex">
+              <img src={person1} alt="person" />
               <img src={person2} alt="person" />
               <img src={person3} alt="person" />
             </div>
@@ -70,7 +72,7 @@ export default function TutorLoveEdufeat() {
             </div>
           </Carousel.Slide>
           <Carousel.Slide>
-            <div className="flex">
+            <div className="flex ">
               <img src={person7} alt="person" />
               <img src={person8} alt="person" />
               <img src={person9} alt="person" />

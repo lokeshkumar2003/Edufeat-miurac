@@ -64,7 +64,7 @@ export default function ExpertSteps() {
                       label={item.label}
                       description={item.description}
                       className={active >= i ? 'active' : ''}
-                      completedIcon={<img src={tick} alt="tick" />}
+                      // completedIcon={<img src={tick} alt="tick" />}
                       icon={<img src={tick2} alt="tick" />}
                     />
                   )

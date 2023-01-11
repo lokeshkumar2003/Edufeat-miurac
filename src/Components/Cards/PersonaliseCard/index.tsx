@@ -12,7 +12,7 @@ export default function PersonaliseCard(props: PersonaliseCardProps) {
 
   return (
     <div
-          className={`personaliseCard  border-l-8  grid justify-center items-center py-10 `}
+          className={`personaliseCard  border-l-[8px] border-solid  grid justify-center items-center py-10 `}
           style={{
               borderLeftColor: color
           }}
