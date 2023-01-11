@@ -58,7 +58,7 @@ export default function HeroSection() {
               </div>
             </div>
           </div>
-          <div className=" border border-white grid grid-cols-2 md:grid-cols-4 gap-28 py-10 ">
+          <div className=" border-[1px] border-white grid grid-cols-2 md:grid-cols-4 gap-28 py-10 ">
             {data.map((item, i) => (
               <div className="flex gap-4 ">
                 <img className="w-16 h-16 " src={item.img} alt="" />
