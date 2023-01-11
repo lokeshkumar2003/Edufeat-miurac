@@ -29,12 +29,12 @@ const socialMedias = [
 ]
 export default function Footer() {
   return (
-    <div className='  bg-darkblue  py-10 text-sm'>
+    <div className='  bg-darkblue  py-3 text-sm'>
       <Content>
         <div className=''>
           <div className='flex flex-col md:flex-row gap-6 flex-wrap'>
             <div className='flex-1 text-center md:text-left '>
-              <div className='w-64 py-[59px] mx-auto md:mx-0 '>
+              <div className='w-64 pt-[59px] mx-auto md:mx-0 '>
                 <img src={logo} alt='logo' />
               </div>
               <div className='w-64 pt-[15px]  mx-auto md:mx-0 text-white'>
@@ -46,7 +46,7 @@ export default function Footer() {
               <div className='flex md:gap-20  flex-col md:flex-row items-start'>
                 {footerItems.map((arr, i) => (
                   <div className='w-full'>
-                    <div className='ul list-none grid gap-4 '>
+                    <div className='ul list-none grid gap-[26px] '>
                       {arr.map((item, i) => (
                         <Link
                           to={`/${item.split(' ')[0]}`}
@@ -66,7 +66,7 @@ export default function Footer() {
                   <div className='grid gap-4 order-last md:order-first w-64 md:w-full mx-auto  text-base'>
                     <div className='flex gap-1  text-white flex-row'>
                       <AiOutlineMail size={20} />
-                      Email: support@edufeat.com
+                      Email:support@edufeat.com
                     </div>
                     <div className=''>
                       <div className='text-white'>Drop your CV: </div>
@@ -80,7 +80,7 @@ export default function Footer() {
                     </div>
                   </div>
                   <div className='flex justify-center md:justify-start '>
-                    <Button color='#29329c' className='text-white' size='md'>
+                    <Button color='#29329c' className='text-white bg-primary' size='md'>
                       Become a Tutor
                     </Button>
                   </div>
