@@ -7,7 +7,7 @@ import hamburger from "../../Assets/Hamburger.svg";
 import { Button } from "@mantine/core";
 import TopHeader from "./TopHeader";
 
-const navbarItems = ["about", "departments", "subject", "contact"];
+const navbarItems = ["about", "subject", "contact"];
 export default function Header() {
   const { pathname } = useLocation();
   console.log(pathname);
@@ -42,7 +42,7 @@ export default function Header() {
                 <div className="text-base font-semibold">
                   <Link to="/tutor">
                     <Button className=" bg-primary font-semibold" size="md">
-                      Become a Tutor
+                      Account
                     </Button>
                   </Link>
                 </div>

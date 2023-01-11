@@ -1,4 +1,5 @@
 import { Accordion, createStyles } from '@mantine/core'
+import close from '../../Assets/close.svg'
 
 import { ActionIcon, AccordionControlProps, Box } from '@mantine/core'
 function AccordionControl(props: AccordionControlProps) {
@@ -36,8 +37,9 @@ const useStyles = createStyles((theme) => ({
 
   chevron: {
     '&[data-rotate]': {
-      display: 'none',
+      display:''
     },
+    
   },
 }))
 const AccordionData = [

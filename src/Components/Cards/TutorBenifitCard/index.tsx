@@ -14,7 +14,7 @@ export default function TutorBenifitCard(props: AppProps) {
       </div>
       <div className='heading text-primary text-center mb-3 '>{title}</div>
 
-      <p className='text-gray '>{description}</p>
+      <p className='text-gray text-justify '>{description}</p>
     </div>
   )
 }

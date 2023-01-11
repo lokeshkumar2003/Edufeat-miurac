@@ -1,10 +1,11 @@
-import React, { useState } from "react";
+import React, { useState, useRef } from "react";
 import Content from "../../Components/Layouts/Content";
 import heroSectionimg from "../../Assets/herosection.svg";
 import { Button } from "@mantine/core";
 import heroSectionImg2 from "../../Assets/herosSectionImg2.svg";
 import { Carousel } from "@mantine/carousel";
 import { createStyles } from "@mantine/core";
+import Autoplay from "embla-carousel-autoplay";
 
 const useStyles = createStyles((_theme, _params, getRef) => ({
   controls: {
@@ -24,6 +25,7 @@ const useStyles = createStyles((_theme, _params, getRef) => ({
 }));
 export default function HeroSection() {
   const { classes } = useStyles();
+  const autoplay = useRef(Autoplay({ delay: 2000 }));
   return (
     <div className="bg-lotion">
       <Content>
@@ -58,6 +60,9 @@ export default function HeroSection() {
             align="start"
             draggable={false}
             classNames={classes}
+            plugins={[autoplay.current]}
+            onMouseEnter={autoplay.current.stop}
+            onMouseLeave={autoplay.current.reset}
           >
             <Carousel.Slide>
               <img
@@ -65,9 +70,9 @@ export default function HeroSection() {
                 className="object-cover md:h-80 mx-auto"
                 alt="img  "
               />
-              <div className=" my-8 text-center">
+              {/* <div className=" my-8 text-center">
                 Work anytime, anywhere, Get paid!
-              </div>
+              </div> */}
             </Carousel.Slide>
             <Carousel.Slide>
               <div className="">
@@ -76,9 +81,9 @@ export default function HeroSection() {
                   className="object-cover md:h-80 mx-auto "
                   alt="img  "
                 />
-                <div className=" my-8 text-center ">
+                {/* <div className=" my-8 text-center ">
                   Build Your Future With Us!
-                </div>
+                </div> */}
               </div>
             </Carousel.Slide>
           </Carousel>

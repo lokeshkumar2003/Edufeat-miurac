@@ -3,9 +3,11 @@ import img from '../../Assets/expert.svg'
 import { Button, createStyles, Stepper } from '@mantine/core'
 import { useState } from 'react'
 import BenifitStepsCard from '../../Components/Cards/ExpertStepsCard'
+import tick from '../../Assets/tick.svg'
+import tick2 from '../../Assets/tick2.svg'
 
 export default function ExpertSteps() {
-  const [active, setActive] = useState(1)
+  const [active, setActive] = useState(0)
   const steps = [
     {
       label: 'Sign-Up',
@@ -29,6 +31,7 @@ export default function ExpertSteps() {
   ]
 
   return (
+    
     <div className='bg-lotion py-24'>
       <Content>
         <div className=''>
@@ -46,6 +49,14 @@ export default function ExpertSteps() {
                 orientation='vertical'
                 size='sm'
                 className='expert'
+                styles={{
+                  separator:{
+                    height: 10,
+                  },
+                  stepIcon:{
+                    backgroundColor:'transparent',
+                  }
+                }}
               >
                 {steps.map((item, i) => {
                   return (
@@ -53,6 +64,8 @@ export default function ExpertSteps() {
                       label={item.label}
                       description={item.description}
                       className={active >= i ? 'active' : ''}
+                      completedIcon={<img src={tick} alt="tick" />}
+                      icon={<img src={tick2} alt="tick" />}
                     />
                   )
                 })}

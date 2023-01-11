@@ -12,7 +12,7 @@ export default function HeroSection() {
               <div className='text-primary font-semibold text-6xl leading-relaxed '>
                 A team made of experts!!
               </div>
-              <p className='py-4 leading-8'>
+              <p className='py-4 leading-8 text-justify font-normal text-base font-sans text-gray'>
                 Edufeat provides a platform for students all around the globe to
                 get academic help from thousands of excellent experts, available
                 24/7. Our products and services are designed to improve the
@@ -25,10 +25,10 @@ export default function HeroSection() {
               </p>
             </div>
           </div>
-          <div className='mx-auto'>
+          <div className='mx-auto '>
             <img
               src={heroSectionimg}
-              className='object-cover md:h-80'
+              className='object-cover '
               alt='img  '
             />
           </div>

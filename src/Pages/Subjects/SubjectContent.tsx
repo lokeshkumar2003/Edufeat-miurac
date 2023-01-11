@@ -9,7 +9,7 @@ export const SubjectContent = () => {
       <Content>
         <div className='p-22'>
           <div className='heading text-primary text-center py-4 '>Subjects</div>
-          <div className='flex flex-wrap gap-10 justify-center p-14 '>
+          <div className='flex flex-wrap gap-10 justify-center  p-14 '>
             {SubjectPageData.map((item, i) => (
               <SubjectPageCard key={i} img={item.img} title={item.title} subjectContent={item.subjectContent}/>
             ))}
