@@ -10,7 +10,6 @@ import { Button } from "@mantine/core";
 import heart from "../../Assets/heart.svg";
 import verified from "../../Assets/verified.svg";
 
-
 export default function HeroSection() {
   return (
     <div className="bg-lightSkyBlue">
@@ -58,19 +57,23 @@ export default function HeroSection() {
               </div>
             </div>
           </div>
-          <div className=" border-[1px] border-white grid grid-cols-2 md:grid-cols-4 gap-28 py-10 ">
+        </>
+      </Content>
+      <div className="border-[1px] border-solid  border-white">
+        <Content>
+          <div className="  grid grid-cols-2 md:grid-cols-4 gap-[185px] py-3 ">
             {data.map((item, i) => (
               <div className="flex gap-4 ">
-                <img className="w-16 h-16 " src={item.img} alt="" />
+                <img className="w-[50px] h-[50px] " src={item.img} alt="" />
                 <div className="font-gray">
                   <p className="font-semibold mb-2 text-lg">{item.title}</p>
-                  <p className="text-sm">{item.description}</p>
+                  <p className="text-sm absolute">{item.description}</p>
                 </div>
               </div>
             ))}
           </div>
-        </>
-      </Content>
+        </Content>
+      </div>
     </div>
   );
 }

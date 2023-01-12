@@ -5,7 +5,7 @@ import { SubjectPageData } from '../../Helpers/Data/SubjectPageData'
 
 export const SubjectContent = () => {
   return (
-    <div className='bg-mintCream py-8'>
+    <div className='bg-mintCream py-8 w-full h-full '>
       <Content>
         <div className='p-22'>
           <div className='heading text-primary text-center py-4 '>Subjects</div>

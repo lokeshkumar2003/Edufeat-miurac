@@ -58,24 +58,24 @@ export default function TutorLoveEdufeat() {
           slideGap={"lg"}
         >
           <Carousel.Slide>
-            <div className="flex">
-              <img src={person1} alt="person" />
-              <img src={person2} alt="person" />
-              <img src={person3} alt="person" />
+            <div className="flex justify-center md:grid-flow-col">
+              <img src={person1} alt="person" className="w-[400px] h-[575px]"/>
+              <img src={person2} alt="person" className="w-[400px] h-[575px]"/>
+              <img src={person3} alt="person" className="w-[400px] h-[575px]"/>
             </div>
           </Carousel.Slide>
           <Carousel.Slide>
-            <div className="flex">
-              <img src={person4} alt="person" />
-              <img src={person5} alt="person" />
-              <img src={person6} alt="person" />
+            <div className="flex justify-center">
+              <img src={person4} alt="person" className="w-[400px] h-[575px]"/>
+              <img src={person5} alt="person" className="w-[400px] h-[575px]"/>
+              <img src={person6} alt="person" className="w-[400px] h-[575px]"/>
             </div>
           </Carousel.Slide>
           <Carousel.Slide>
-            <div className="flex ">
-              <img src={person7} alt="person" />
-              <img src={person8} alt="person" />
-              <img src={person9} alt="person" />
+            <div className="flex justify-center ">
+              <img src={person7} alt="person" className="w-[400px] h-[575px]" />
+              <img src={person8} alt="person" className="w-[400px] h-[575px]"/>
+              <img src={person9} alt="person" className="w-[400px] h-[575px]"/>
             </div>
           </Carousel.Slide>
         </Carousel>

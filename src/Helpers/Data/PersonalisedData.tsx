@@ -2,7 +2,7 @@ import assignment from '../../Assets/assignment.svg'
 import testTube from '../../Assets/testTubes.svg'
 import analyticsReport from '../../Assets/analyticsReport.svg'
 import bookLibrary from '../../Assets/bookLibrary.svg'
-import paperSheet from '../../Assets/paperSheet.svg'
+import paperSheet from '../../Assets/paperQuill.svg'
 import liveSession2 from "../../Assets/liveSession2.svg";
 import notebook from '../../Assets/notebook.svg'
 export const personalisedData = [

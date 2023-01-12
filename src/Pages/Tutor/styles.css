@@ -10,15 +10,18 @@
 }
 .expert .mantine-Stepper-stepLabel {
   color: #0a2540;
-  margin-bottom: 1rem;
+  /* margin-bottom: 1rem; */
   font-size: 1rem;
+  padding-top: 20px;
 }
 .expert .mantine-Stepper-stepDescription {
   font-weight: 400;
   font-size: 1rem;
   line-height: 1.5rem;
-
   color: #4a4a68;
+  padding-top: 8px;
+  padding-bottom: 2px;
+  
 }
 
 .expert .mantine-Stepper-step.active .mantine-Stepper-stepBody {
