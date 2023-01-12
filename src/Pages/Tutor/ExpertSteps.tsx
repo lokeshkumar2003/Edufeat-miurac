@@ -86,23 +86,23 @@ export default function ExpertSteps() {
                 withControls={false}
               >
                 <Carousel.Slide>
-                  <img src={img} className="object-cover  " alt="" />
+                  <img src={img} className="object-cover w-[564.69px] h-[476.79] " alt="" />
                 </Carousel.Slide>
                 <Carousel.Slide>
-                  <img src={img2} className="object-cover  " alt="" />
+                  <img src={img2} className="object-cover w-[564.69px] h-[476.79] " alt="" />
                 </Carousel.Slide>
                 <Carousel.Slide>
-                  <img src={img3} className="object-cover  " alt="" />
+                  <img src={img3} className="object-cover w-[564.69px] h-[476.79] " alt="" />
                 </Carousel.Slide>
                 <Carousel.Slide>
-                  <img src={img4} className="object-cover  " alt="" />
+                  <img src={img4} className="object-cover w-[564.69px] h-[476.79] " alt="" />
                 </Carousel.Slide>
               </Carousel>
             </div>
             <div className="">
               <Stepper
                 active={active}
-                onStepClick={setActive}
+                // onStepClick={setActive}
                 orientation="vertical"
                 size="sm"
                 className="expert"

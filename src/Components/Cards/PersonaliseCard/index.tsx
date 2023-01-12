@@ -18,7 +18,7 @@ export default function PersonaliseCard(props: PersonaliseCardProps) {
           }}
     >
       <div className='text-center w-11/12 mx-auto'>
-        <img src={img} alt='img' className='mx-auto w-32 object-contain h-32' />
+        <img src={img} alt='img' className='mx-auto  object-contain ' />
         <h2 className='text-center font-semibold mb-6 mt-3'>{title}</h2>
         <p className='text-left '>{description}</p>
       </div>
