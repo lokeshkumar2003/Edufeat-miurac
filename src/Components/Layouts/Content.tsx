@@ -4,7 +4,7 @@ type Props = {
 }
 export default function Content(props: Props) {
   return (
-    <div className='md:px-12 px-8 max-w-[1440px] mx-auto'>
+    <div className='px-8 max-w-[1440px] mx-auto'>
       {props.children}
     </div>
   )

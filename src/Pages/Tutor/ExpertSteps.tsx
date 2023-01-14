@@ -106,9 +106,10 @@ export default function ExpertSteps() {
                 orientation="vertical"
                 size="sm"
                 className="expert"
+                classNames={{ verticalSeparator: "broder-solid border-l-[8px] -ml-1" }}
                 styles={{
                   separator: {
-                    height: 10,
+                    height: 10
                   },
                   stepIcon: {
                     backgroundColor: "transparent",
