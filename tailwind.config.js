@@ -28,6 +28,7 @@ module.exports = {
       hint: '#BBBEE0',
       turquoise: '#3BE3C5',
       mintCream: '#E7F4FF',
+      linear:'',
     },
     fontFamily: {
       sans: ['Poppins', 'sans-serif'],
