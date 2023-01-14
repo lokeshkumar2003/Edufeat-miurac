@@ -58,21 +58,21 @@ export default function TutorLoveEdufeat() {
           slideGap={"lg"}
         >
           <Carousel.Slide>
-            <div className="flex justify-center md:grid-flow-col">
+            <div className="flex justify-center lg:flex-nowrap flex-wrap ">
               <img src={person1} alt="person" className="w-[400px] h-[575px]"/>
               <img src={person2} alt="person" className="w-[400px] h-[575px]"/>
               <img src={person3} alt="person" className="w-[400px] h-[575px]"/>
             </div>
           </Carousel.Slide>
           <Carousel.Slide>
-            <div className="flex justify-center">
+            <div className="flex lg:flex-nowrap justify-center flex-wrap">
               <img src={person4} alt="person" className="w-[400px] h-[575px]"/>
               <img src={person5} alt="person" className="w-[400px] h-[575px]"/>
               <img src={person6} alt="person" className="w-[400px] h-[575px]"/>
             </div>
           </Carousel.Slide>
           <Carousel.Slide>
-            <div className="flex justify-center ">
+            <div className="flex lg:flex-nowrap justify-center flex-wrap ">
               <img src={person7} alt="person" className="w-[400px] h-[575px]" />
               <img src={person8} alt="person" className="w-[400px] h-[575px]"/>
               <img src={person9} alt="person" className="w-[400px] h-[575px]"/>

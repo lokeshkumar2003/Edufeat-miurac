@@ -10,14 +10,14 @@ export const personalisedData = [
     img: assignment,
     title: 'Assignment',
     description: 'Forget your deadlines and let us help you do the work!',
-    color: '#00BFFC',
+    color: '#0094FF',
   },
   {
     img: liveSession2,
     title: 'Live Session',
     description:
       'Take live help from experts who can help you with the most complex problems with step by step solutions.',
-    color: '#04c324',
+    color: '#04C4B0',
   },
   {
     img: testTube,
