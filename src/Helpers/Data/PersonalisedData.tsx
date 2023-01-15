@@ -10,7 +10,7 @@ export const personalisedData = [
     img: assignment,
     title: 'Assignment',
     description: 'Forget your deadlines and let us help you do the work!',
-    color: '#0094FF',
+    color: 'bg-gradient-to-r from-#00BFFC to-#0094FF',
   },
   {
     img: liveSession2,

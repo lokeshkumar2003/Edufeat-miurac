@@ -1,18 +1,22 @@
 import React from "react";
 import Content from "../../Components/Layouts/Content";
 import addSectionBg from "../../Assets/addSectionBg.svg";
+import addSectionBg2 from "../../Assets/addSectionBg2.svg"
 
 export default function AddSection() {
   return (
     <div>
       <div
         style={{
-          backgroundImage: `url(${addSectionBg})`,
+          backgroundImage: `url(${addSectionBg2})`,
           backgroundRepeat: "no-repeat",
+          backgroundSize: "none",
+          
         }}
-        className="bg-lightbg  "
       >
-        <div className=" pb-10 pt-14  rounded-3xl">
+        <div
+          className=" pb-10 pt-14 rounded-3xl"
+        >
           <Content>
             <div className="">
               <div className="text-center text-white">Edufeat</div>

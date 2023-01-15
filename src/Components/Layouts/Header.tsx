@@ -2,13 +2,15 @@ import { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import logo from "../../Assets/logo.svg";
 import Content from "./Content";
-import close from '../../Assets/close.svg';
+import close from "../../Assets/close.svg";
 import hamburger from "../../Assets/Hamburger.svg";
 import { Button } from "@mantine/core";
 import TopHeader from "./TopHeader";
+import { Drawer, Group } from "@mantine/core";
 
 const navbarItems = ["about", "subject", "contact"];
 export default function Header() {
+  const [opened, setOpened] = useState(false);
   const [nav, setNav] = useState(false);
   const handleClick = () => setNav(!nav);
 
@@ -56,34 +58,42 @@ export default function Header() {
                 <button className='bluebtn'>Account</button>
               </div> */}
               </div>
-              <div className="md:hidden " >
-                {!nav ? <img src={hamburger} alt="" /> : <img src={close} alt="" />}
+              <div className="">
+                <Drawer
+                  opened={opened}
+                  onClose={() => setOpened(false)}
+                  position='top'
+                  padding="xl"
+                  size="auto"
+                >
+                  {navbarItems.map((item, i) => (
+                    <Link to={`/${item}`}>
+                      <div
+                        className={`capitalize text-center  text-xl ${
+                          pathname.includes(item)
+                            ? "text-primary font-semibold"
+                            : ""
+                        }`}
+                      >
+                        {item}{" "}
+                      </div>
+                    </Link>
+                  ))}
+                  <div className="text-base font-semibold">
+                    <Link to="/tutor">
+                      <Button className=" bg-primary font-semibold" size="md">
+                        Account
+                      </Button>
+                    </Link>
+                  </div>
+                </Drawer>
+              </div>
+              <div className="md:hidden ">
+                <Group position="center">
+                  <img src={hamburger} alt="" onClick={() => setOpened(true)}/>
+                </Group>
               </div>
             </div>
-            <ul className="md:hidden">
-              <li>
-                {navbarItems.map((item, i) => (
-                  <Link to={`/${item}`}>
-                    <div
-                      className={`capitalize text-base ${
-                        pathname.includes(item)
-                          ? "text-primary font-semibold"
-                          : ""
-                      }`}
-                    >
-                      {item}{" "}
-                    </div>
-                  </Link>
-                ))}
-                <div className="flex flex-col my-4">
-                <Link to="/tutor">
-                    <Button className=" bg-primary font-semibold" size="md">
-                      Account
-                    </Button>
-                  </Link>
-                </div>
-              </li>
-            </ul>
           </div>
         </Content>
       </div>

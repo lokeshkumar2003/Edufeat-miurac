@@ -86,16 +86,32 @@ export default function ExpertSteps() {
                 withControls={false}
               >
                 <Carousel.Slide>
-                  <img src={img} className="object-cover w-[564.69px] h-[476.79] " alt="" />
+                  <img
+                    src={img}
+                    className="object-cover w-[564.69px] h-[476.79] "
+                    alt=""
+                  />
                 </Carousel.Slide>
                 <Carousel.Slide>
-                  <img src={img2} className="object-cover w-[564.69px] h-[476.79] " alt="" />
+                  <img
+                    src={img2}
+                    className="object-cover w-[564.69px] h-[476.79] "
+                    alt=""
+                  />
                 </Carousel.Slide>
                 <Carousel.Slide>
-                  <img src={img3} className="object-cover w-[564.69px] h-[476.79] " alt="" />
+                  <img
+                    src={img3}
+                    className="object-cover w-[564.69px] h-[476.79] "
+                    alt=""
+                  />
                 </Carousel.Slide>
                 <Carousel.Slide>
-                  <img src={img4} className="object-cover w-[564.69px] h-[476.79] " alt="" />
+                  <img
+                    src={img4}
+                    className="object-cover w-[564.69px] h-[476.79] "
+                    alt=""
+                  />
                 </Carousel.Slide>
               </Carousel>
             </div>
@@ -106,6 +122,9 @@ export default function ExpertSteps() {
                 orientation="vertical"
                 size="sm"
                 className="expert"
+                classNames={{
+                  verticalSeparator: "broder-solid border-l-[8px] -ml-1",
+                }}
                 styles={{
                   separator: {
                     height: 10,
