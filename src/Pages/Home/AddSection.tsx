@@ -15,7 +15,7 @@ export default function AddSection() {
         }}
       >
         <div
-          className=" pb-10 pt-14 rounded-3xl"
+          className=" pt-14 rounded-3xl"
         >
           <Content>
             <div className="">
