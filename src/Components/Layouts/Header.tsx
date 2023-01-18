@@ -33,7 +33,7 @@ export default function Header() {
             </Link>
 
             <div className="ml-auto  ">
-              <div className="hidden md:flex items-center gap-10 ">
+              <div className="hidden md:flex text-gray items-center gap-10 ">
                 {navbarItems.map((item, i) => (
                   <Link to={`/${item}`}>
                     <div
@@ -81,7 +81,7 @@ export default function Header() {
                   ))}
                   <div className="text-base font-semibold">
                     <Link to="/tutor">
-                      <Button className=" bg-primary font-semibold" size="md">
+                      <Button className=" bg-primary font-semibold w-full" >
                         Account
                       </Button>
                     </Link>

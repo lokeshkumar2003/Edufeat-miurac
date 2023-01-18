@@ -10,12 +10,12 @@ export default function AddSection() {
         style={{
           backgroundImage: `url(${addSectionBg2})`,
           backgroundRepeat: "no-repeat",
-          backgroundSize: "none",
+          backgroundSize: "cover",
           
         }}
       >
         <div
-          className=" pt-14 rounded-3xl"
+          className=" pb-10 pt-14 rounded-3xl"
         >
           <Content>
             <div className="">

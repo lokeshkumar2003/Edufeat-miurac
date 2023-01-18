@@ -2,6 +2,8 @@ import React from 'react'
 import Content from '../../Components/Layouts/Content'
 import img from '../../Assets/faq.svg'
 import { FaqAccordionComponent } from './FaqAccordion'
+import { MoreFaqAccordionComponent } from './MoreFaq'
+
 export default function Faq() {
   return (
     <div className='bg-lotion py-8'>
@@ -19,6 +21,7 @@ export default function Faq() {
               <div className="text-primary text-center md:text-left">
                 View more   {" >"}
               </div>
+              {/* <MoreFaqAccordionComponent /> */}
 
             </div>
           </div>

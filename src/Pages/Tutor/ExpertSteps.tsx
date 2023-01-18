@@ -88,28 +88,28 @@ export default function ExpertSteps() {
                 <Carousel.Slide>
                   <img
                     src={img}
-                    className="object-cover w-[564.69px] h-[476.79] "
+                    className="object-cover  w-[564.69px] h-[476.79] "
                     alt=""
                   />
                 </Carousel.Slide>
                 <Carousel.Slide>
                   <img
                     src={img2}
-                    className="object-cover w-[564.69px] h-[476.79] "
+                    className="object-cover  w-[564.69px] h-[476.79] "
                     alt=""
                   />
                 </Carousel.Slide>
                 <Carousel.Slide>
                   <img
                     src={img3}
-                    className="object-cover w-[564.69px] h-[476.79] "
+                    className="object-cover  w-[564.69px] h-[476.79] "
                     alt=""
                   />
                 </Carousel.Slide>
                 <Carousel.Slide>
                   <img
                     src={img4}
-                    className="object-cover w-[564.69px] h-[476.79] "
+                    className="object-cover  w-[564.69px] h-[476.79] "
                     alt=""
                   />
                 </Carousel.Slide>
@@ -123,14 +123,19 @@ export default function ExpertSteps() {
                 size="sm"
                 className="expert"
                 classNames={{
-                  verticalSeparator: "broder-solid border-l-[8px] -ml-1",
+                  verticalSeparator: "broder-solid border-l-[8px] -ml-1  ",
                 }}
                 styles={{
                   separator: {
                     height: 10,
+                    marginLeft:-2,
+                    marginRight:-2,
                   },
                   stepIcon: {
                     backgroundColor: "transparent",
+                  },
+                  step: {
+                    padding: 0,
                   },
                 }}
               >
@@ -139,7 +144,7 @@ export default function ExpertSteps() {
                     <Stepper.Step
                       label={item.label}
                       description={item.description}
-                      className={active >= i ? "active" : ""}
+                      className={active === i ? "active" : ""}
                       // completedIcon={<img src={tick} alt="tick" />}
                       icon={<img src={tick2} alt="tick" />}
                     />

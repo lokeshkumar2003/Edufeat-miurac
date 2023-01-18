@@ -43,7 +43,7 @@ export default function Footer() {
             </div>
 
             <div className="pt-[95px] ">
-              <div className="flex md:gap-20  flex-col md:flex-row items-start">
+              <div className="flex md:gap-[70px]  flex-col md:flex-row items-start">
                 {footerItems.map((arr, i) => (
                   <div className="w-full">
                     <div className="ul list-none grid gap-[26px] ">
@@ -100,7 +100,7 @@ export default function Footer() {
               </div>
             ))}
           </div>
-          <div className="max-w-3x text-center text-[10px] mt-16 grid gap-1">
+          <div className="max-w-3x text-center text-[10px]  grid gap-1">
             <div className="text-white">
               Copyright © 2022 edufeat.com. All Rights Reserved
             </div>{" "}
