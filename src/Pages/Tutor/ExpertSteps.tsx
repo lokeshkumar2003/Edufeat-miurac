@@ -2,6 +2,7 @@ import Content from "../../Components/Layouts/Content";
 import img from "../../Assets/expert.svg";
 import { Button, createStyles, Stepper } from "@mantine/core";
 import { useState, useEffect, useRef } from "react";
+import useImage from 'use-image';
 import BenifitStepsCard from "../../Components/Cards/ExpertStepsCard";
 import tick from "../../Assets/tick.svg";
 import tick2 from "../../Assets/tick2.svg";
@@ -65,7 +66,20 @@ export default function ExpertSteps() {
         "Congratulations! You are an expert Start working and earning.",
     },
   ];
-
+const stepimage=[
+  {
+    img:img,
+  },
+  {
+    img:img2,
+  },
+  {
+    img:img3,
+  },
+  {
+    img:img4
+  }
+]
   return (
     <div className="bg-lotion py-24">
       <Content>
@@ -85,34 +99,15 @@ export default function ExpertSteps() {
                 plugins={[autoplay.current]}
                 withControls={false}
               >
-                <Carousel.Slide>
-                  <img
-                    src={img}
-                    className="object-cover  w-[564.69px] h-[476.79] "
-                    alt=""
-                  />
-                </Carousel.Slide>
-                <Carousel.Slide>
-                  <img
-                    src={img2}
-                    className="object-cover  w-[564.69px] h-[476.79] "
-                    alt=""
-                  />
-                </Carousel.Slide>
-                <Carousel.Slide>
-                  <img
-                    src={img3}
-                    className="object-cover  w-[564.69px] h-[476.79] "
-                    alt=""
-                  />
-                </Carousel.Slide>
-                <Carousel.Slide>
-                  <img
-                    src={img4}
-                    className="object-cover  w-[564.69px] h-[476.79] "
-                    alt=""
-                  />
-                </Carousel.Slide>
+                { stepimage.map((item,i)=>{
+                  return(
+                    <Carousel.Slide>
+                      <img src={item.img} alt="img" className="object-cover  w-[564.69px] h-[476.79]"/>
+                    </Carousel.Slide>
+                  )
+                })
+
+                }
               </Carousel>
             </div>
             <div className="">
