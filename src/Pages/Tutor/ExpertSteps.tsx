@@ -1,14 +1,14 @@
 import Content from "../../Components/Layouts/Content";
-import img from "../../Assets/expert.svg";
-import { Button, createStyles, Stepper } from "@mantine/core";
+import img from "../../Assets/expert.png";
+import { Button, createStyles, Loader, Stepper } from "@mantine/core";
 import { useState, useEffect, useRef } from "react";
 import useImage from 'use-image';
 import BenifitStepsCard from "../../Components/Cards/ExpertStepsCard";
 import tick from "../../Assets/tick.svg";
 import tick2 from "../../Assets/tick2.svg";
-import img2 from "../../Assets/Online screening.svg";
-import img3 from "../../Assets/Verification.svg";
-import img4 from "../../Assets/Start answering.svg";
+import img2 from "../../Assets/Online screening.png";
+import img3 from "../../Assets/Verification.png";
+import img4 from "../../Assets/Start answering.png";
 import { Carousel } from "@mantine/carousel";
 import Autoplay from "embla-carousel-autoplay";
 
@@ -28,23 +28,60 @@ const useStyles = createStyles((_theme, _params, getRef) => ({
     },
   },
 }));
-
+const stepimage=[
+  {
+    img:img,
+  },
+  {
+    img:img2,
+  },
+  {
+    img:img3,
+  },
+  {
+    img:img4
+  }
+]
 export default function ExpertSteps() {
   const { classes } = useStyles();
   const autoplay = useRef(Autoplay({ delay: 5000 }));
+  const [imgsLoaded, setImgsLoaded] = useState(false);
   const [active, setActive] = useState(0);
   useEffect(() => {
-    const interval = setInterval(() => {
-      setActive((prev) => {
-        if (prev === 3) {
-          return 0;
-        }
-        return prev + 1;
-      });
-      console.log(active);
-    }, 5000);
-    return () => clearInterval(interval);
-  }, []);
+    if(imgsLoaded){
+      const interval = setInterval(() => {
+        setActive((prev) => {
+          if (prev === 3) {
+            return 0;
+          }
+          return prev + 1;
+        });
+        console.log(active);
+      }, 5000);
+      return () => clearInterval(interval);
+    }
+  }, [imgsLoaded]);
+  const loadImage = (image:string) => {
+    return new Promise((resolve, reject) => {
+      const loadImg = new Image()
+      loadImg.src = image
+      // wait 2 seconds to simulate loading time
+      loadImg.onload = () => resolve(image)
+
+      loadImg.onerror = err => reject(err)
+    })
+  }
+  useEffect(() => {
+    Promise.all(stepimage.map(image => loadImage(image.img)))
+    .then(() => setImgsLoaded(true))
+    .catch(err => console.log("Failed to load images", err))
+  
+    return () => {
+      
+    }
+  }, [])
+  
+  
   const steps = [
     {
       label: "Sign-Up",
@@ -66,20 +103,7 @@ export default function ExpertSteps() {
         "Congratulations! You are an expert Start working and earning.",
     },
   ];
-const stepimage=[
-  {
-    img:img,
-  },
-  {
-    img:img2,
-  },
-  {
-    img:img3,
-  },
-  {
-    img:img4
-  }
-]
+  if(!imgsLoaded) return <div className="w-full h-96 flex justify-center items-center"> <Loader variant="dots" /></div>
   return (
     <div className="bg-lotion py-24">
       <Content>
@@ -102,7 +126,7 @@ const stepimage=[
                 { stepimage.map((item,i)=>{
                   return(
                     <Carousel.Slide>
-                      <img src={item.img} alt="img" className="object-cover  w-[564.69px] h-[476.79]"/>
+                      <img src={item.img} alt="img" className="object-cover w-[564.69px] h-[476.79px]"/>
                     </Carousel.Slide>
                   )
                 })
