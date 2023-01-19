@@ -1,10 +1,11 @@
-import React from 'react'
+import React,{useState} from 'react'
 import Content from '../../Components/Layouts/Content'
 import img from '../../Assets/faq.svg'
 import { FaqAccordionComponent } from './FaqAccordion'
 import { MoreFaqAccordionComponent } from './MoreFaq'
 
 export default function Faq() {
+  const[show,setShow]=useState(false)
   return (
     <div className='bg-lotion py-8'>
       <Content>
@@ -18,10 +19,13 @@ export default function Faq() {
             </div>
             <div className=''>
               <FaqAccordionComponent />
-              <div className="text-primary text-center md:text-left">
+              {
+                show?<MoreFaqAccordionComponent />:null
+              }
+              
+              <div className="text-primary text-center md:text-left" onClick={()=>setShow(!show)} >
                 View more   {" >"}
               </div>
-              <MoreFaqAccordionComponent />
 
             </div>
           </div>

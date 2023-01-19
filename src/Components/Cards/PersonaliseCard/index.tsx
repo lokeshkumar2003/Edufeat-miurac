@@ -12,12 +12,14 @@ export default function PersonaliseCard(props: PersonaliseCardProps) {
 
   return (
     <div
-          className={`personaliseCard  border-l-[15px] border-solid border-0  grid justify-center items-center py-10 `}
-          style={{
-            borderImage: color
-          }}
+    key={title}
+          className={`personaliseCard  grid justify-center items-center py-10 relative overflow-hidden`}
+          // style={{
+            
+          // }}
     >
-      <div className='text-center w-11/12 mx-auto'>
+      <div style={{background:color}} className='absolute left-0 top-0 w-[15px] h-full overflow-hidden' />
+      <div className='text-center w-11/12 ml-8'>
         <img src={img} alt='img' className='mx-auto  object-contain ' />
         <h2 className='text-center font-semibold mb-6 mt-3'>{title}</h2>
         <p className='text-left '>{description}</p>
