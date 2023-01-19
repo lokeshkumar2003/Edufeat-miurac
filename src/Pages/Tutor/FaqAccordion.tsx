@@ -82,7 +82,7 @@ export const FaqAccordionComponent = () => {
               <h2 className='text-primary text-lg font-medium'>{item.title}</h2>
             </AccordionControl>
             <Accordion.Panel>
-              <div className='text-base'>{item.discription}</div>
+              <div className='text-base text-justify'>{item.discription}</div>
             </Accordion.Panel>
           </Accordion.Item>
         )

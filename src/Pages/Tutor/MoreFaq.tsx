@@ -50,7 +50,7 @@ const AccordionData = [
   {
     title: "I am not an Indian. Can I still apply?",
     discription:
-      "To work as an Edufeat expert, it is mandatory to provide the following; – Indian PAN – Indian Bank account – Proof of Address issued in India (any one of Driving Licence, Voter ID or Aadhaar Card)",
+      "To work as an Edufeat expert, it is mandatory to provide the following; \n – Indian PAN – Indian Bank account – Proof of Address issued in India (any one of Driving Licence, Voter ID or Aadhaar Card)",
   },
   {
     title: "Is it safe to share Bank and PAN details with Edufeat?",

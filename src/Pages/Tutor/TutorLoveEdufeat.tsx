@@ -43,7 +43,7 @@ export default function TutorLoveEdufeat() {
           loop
           align="center"
           withIndicators
-          slideSize="100%"
+          slideSize="33.33%"
           draggable={false}
           classNames={classes}
           plugins={[autoplay.current]}
@@ -55,27 +55,57 @@ export default function TutorLoveEdufeat() {
               height: 15,
             },
           }}
-          slideGap={"lg"}
+          slideGap={"xs"}
+          breakpoints={[
+            { maxWidth: 'md', slideSize: '50%' },
+            { maxWidth: 'sm', slideSize: '100%', slideGap: 0 },
+          ]}
+          slidesToScroll={3}
+          
         >
           <Carousel.Slide>
-            <div className="flex justify-center lg:flex-nowrap flex-wrap ">
-              <img src={person1} alt="person" className="w-[400px] h-[575px]"/>
-              <img src={person2} alt="person" className="w-[400px] h-[575px]"/>
-              <img src={person3} alt="person" className="w-[400px] h-[575px]"/>
+            <div className="flex  lg:flex-nowrap justify-center flex-wrap ">
+              <img src={person1} alt="person" className="w-[400px] h-[575px]" />
             </div>
           </Carousel.Slide>
           <Carousel.Slide>
-            <div className="flex lg:flex-nowrap justify-center flex-wrap">
-              <img src={person4} alt="person" className="w-[400px] h-[575px]"/>
-              <img src={person5} alt="person" className="w-[400px] h-[575px]"/>
-              <img src={person6} alt="person" className="w-[400px] h-[575px]"/>
+            <div className="flex  lg:flex-nowrap justify-center flex-wrap">
+              <img src={person2} alt="person" className="w-[400px] h-[575px]" />
+            </div>
+          </Carousel.Slide>
+          <Carousel.Slide>
+            <div className="flex  lg:flex-nowrap justify-center flex-wrap">
+              <img src={person3} alt="person" className="w-[400px] h-[575px]" />
+            </div>
+          </Carousel.Slide>
+          <Carousel.Slide>
+            <div className="flex lg:flex-nowrap  justify-center flex-wrap">
+              <img src={person4} alt="person" className="w-[400px] h-[575px]" />
+            </div>
+          </Carousel.Slide>
+          <Carousel.Slide>
+            <div className="flex  lg:flex-nowrap justify-center flex-wrap">
+              <img src={person5} alt="person" className="w-[400px] h-[575px]" />
+            </div>
+          </Carousel.Slide>
+          <Carousel.Slide>
+            <div className="flex  lg:flex-nowrap justify-center flex-wrap">
+              <img src={person6} alt="person" className="w-[400px] h-[575px]" />
             </div>
           </Carousel.Slide>
           <Carousel.Slide>
             <div className="flex lg:flex-nowrap justify-center flex-wrap ">
               <img src={person7} alt="person" className="w-[400px] h-[575px]" />
-              <img src={person8} alt="person" className="w-[400px] h-[575px]"/>
-              <img src={person9} alt="person" className="w-[400px] h-[575px]"/>
+            </div>
+          </Carousel.Slide>
+          <Carousel.Slide>
+            <div className="flex  lg:flex-nowrap justify-center flex-wrap">
+              <img src={person8} alt="person" className="w-[400px] h-[575px]" />
+            </div>
+          </Carousel.Slide>
+          <Carousel.Slide>
+            <div className="flex  lg:flex-nowrap justify-center flex-wrap">
+              <img src={person9} alt="person" className="w-[400px] h-[575px]" />
             </div>
           </Carousel.Slide>
         </Carousel>

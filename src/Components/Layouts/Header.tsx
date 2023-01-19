@@ -65,6 +65,7 @@ export default function Header() {
                   position='top'
                   padding="xl"
                   size="auto"
+                  
                 >
                   {navbarItems.map((item, i) => (
                     <Link to={`/${item}`}>
@@ -81,7 +82,7 @@ export default function Header() {
                   ))}
                   <div className="text-base font-semibold">
                     <Link to="/tutor">
-                      <Button className=" bg-primary font-semibold w-full" >
+                      <Button className=" bg-primary font-semibold  w-full" >
                         Account
                       </Button>
                     </Link>

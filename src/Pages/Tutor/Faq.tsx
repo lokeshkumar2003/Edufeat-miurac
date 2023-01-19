@@ -21,7 +21,7 @@ export default function Faq() {
               <div className="text-primary text-center md:text-left">
                 View more   {" >"}
               </div>
-              {/* <MoreFaqAccordionComponent /> */}
+              <MoreFaqAccordionComponent />
 
             </div>
           </div>
