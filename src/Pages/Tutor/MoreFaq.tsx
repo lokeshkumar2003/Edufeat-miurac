@@ -3,7 +3,6 @@ import close from "../../Assets/close.svg";
 
 import { ActionIcon, AccordionControlProps, Box } from "@mantine/core";
 function AccordionControl(props: AccordionControlProps) {
-  console.log(props);
   return (
     <Box sx={{ display: "flex", alignItems: "center" }}>
       <Accordion.Control {...props} />

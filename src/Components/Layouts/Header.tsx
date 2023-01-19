@@ -18,7 +18,6 @@ export default function Header() {
     setNav(!nav);
   };
   const { pathname } = useLocation();
-  console.log(pathname);
   return (
     <div>
       {pathname !== "/tutor" && <TopHeader />}

@@ -1,9 +1,8 @@
-import { Accordion, createStyles } from '@mantine/core'
+import { Accordion, ChevronIcon, CloseButton, createStyles } from '@mantine/core'
 import close from '../../Assets/close.svg'
-
+import {useState} from "react"
 import { ActionIcon, AccordionControlProps, Box } from '@mantine/core'
 function AccordionControl(props: AccordionControlProps) {
-  console.log(props)
   return (
     <Box sx={{ display: 'flex', alignItems: 'center' }}>
       <Accordion.Control {...props} />
@@ -67,6 +66,7 @@ const AccordionData = [
 
 export const FaqAccordionComponent = () => {
   const { classes } = useStyles()
+  const [value, setValue] = useState<string | null>(null);  
   return (
     <Accordion
       mx='auto'
@@ -74,11 +74,24 @@ export const FaqAccordionComponent = () => {
       defaultValue='customization'
       classNames={classes}
       className={classes.root}
+      value={value} 
+      onChange={setValue}
+      disableChevronRotation
+      
+      // styles={{
+      //   chevron: {
+          
+      //     '&[data-rotate]': {
+      //       // transform: 'rotate(45deg)',
+      //       display:"hidden"
+      //     },
+      //   },
+      // }}
     >
       {AccordionData.map((item, i) => {
         return (
           <Accordion.Item value={`item-${i}`}>
-            <AccordionControl>
+            <AccordionControl chevron={value === `item-${i}`?<CloseButton />:<ChevronIcon />} >
               <h2 className='text-primary text-lg font-medium'>{item.title}</h2>
             </AccordionControl>
             <Accordion.Panel>
