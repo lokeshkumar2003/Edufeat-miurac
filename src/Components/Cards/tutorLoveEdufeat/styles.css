@@ -1,3 +1,4 @@
+@import url(https://fonts.googleapis.com/css?family=Oswald:200,300,regular,500,600,700);
 .card{
     
 /* position: absolute; */
@@ -9,4 +10,16 @@ top: 60px;
 background: #FFFFFF;
 box-shadow: 0px 15px 45px rgba(150, 207, 255, 0.25);
 border-radius: 30px;
+}
+
+.comma_flip{
+    transform: rotate(180deg);
+    top:325px;
+    -webkit-transform:rotate(180deg) ;
+}
+.comma_right{
+    right:20px;
+    transform: scaleY(-1);
+    top:500px;
+
 }

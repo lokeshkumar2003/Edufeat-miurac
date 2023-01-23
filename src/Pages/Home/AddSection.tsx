@@ -1,16 +1,17 @@
 import React from "react";
 import Content from "../../Components/Layouts/Content";
-import addSectionBg from "../../Assets/addSectionBg.svg";
-import addSectionBg2 from "../../Assets/addSectionBg2.svg"
+// import addSectionBg from "../../Assets/addSectionBg.svg";
+import addSectionBg2 from "../../Assets/addSectionBg3.png"
 
 export default function AddSection() {
   return (
-    <div>
+    <div className="bg-lightSkyBlue">
       <div
+      className="overflow-hidden rounded-[30px]"
         style={{
           backgroundImage: `url(${addSectionBg2})`,
-          backgroundRepeat: "no-repeat",
           backgroundSize: "cover",
+          backgroundRepeat: "no-repeat",
           
         }}
       >

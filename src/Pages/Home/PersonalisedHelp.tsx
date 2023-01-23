@@ -8,7 +8,7 @@ export default function PersonalisedHelp() {
     <div className='bg-lotion py-24'>
       <Content>
         <div className=''>
-          <div className='text-primary heading text-center mb-24'>
+          <div className='text-primary heading text-center mb-[70px]'>
             Get personalised help with
           </div>
           <div className='flex flex-wrap gap-10 justify-center'>

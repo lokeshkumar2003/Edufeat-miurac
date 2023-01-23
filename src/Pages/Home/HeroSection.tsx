@@ -41,7 +41,7 @@ export default function HeroSection() {
                           className="text-white bg-primary"
                           size="md"
                         >
-                          Become a Tutor
+                          Get Started
                         </Button>
                       </Link>
                     </div>

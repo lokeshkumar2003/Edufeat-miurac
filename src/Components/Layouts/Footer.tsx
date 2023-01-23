@@ -42,10 +42,10 @@ export default function Footer() {
               </div>
             </div>
 
-            <div className="pt-[95px] ">
+            <div className="md:pt-[95px] ">
               <div className="flex md:gap-[70px]  flex-col md:flex-row items-start">
                 {footerItems.map((arr, i) => (
-                  <div className="w-full">
+                  <div className="w-full pt-8 md:pt-0">
                     <div className="ul list-none grid gap-[26px] ">
                       {arr.map((item, i) => (
                         <Link
@@ -79,11 +79,11 @@ export default function Footer() {
                       Phone: +91-8240014127
                     </div>
                   </div>
-                  <div className="flex justify-center md:justify-start ">
+                  <div className="flex justify-center md:justify-start pt-8 md:pt-0 ">
                     <Button
                       color="#29329c"
                       className="text-white bg-primary"
-                      size="md"
+                      size="lg"
                     >
                       Become a Tutor
                     </Button>
@@ -94,14 +94,14 @@ export default function Footer() {
           </div>
           <div className="my-4 flex gap-4 items-center md:justify-start justify-center">
             {socialMedias.map((social, i) => (
-              <div className="flex gap-2 items-center text-xl text-white">
+              <div className="flex gap-2  items-center text-xl text-white">
                 {social.icon}
-                <div className="text-sm text-white">{social.label} </div>
+                <div className="text-sm text-white md:inline-block hidden">{social.label} </div>
               </div>
             ))}
           </div>
-          <div className="max-w-3x text-center text-[10px]  grid gap-1">
-            <div className="text-white">
+          <div className="max-w-3x text-center text-[10px]  grid gap-1 ">
+            <div className="text-white pb-[18px] md:pb-0">
               Copyright © 2022 edufeat.com. All Rights Reserved
             </div>{" "}
             <div className="text-white">

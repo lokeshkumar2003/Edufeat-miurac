@@ -24,7 +24,7 @@ export default function Faq() {
               }
               
               <div className="text-primary text-center md:text-left" onClick={()=>setShow(!show)} >
-                View more   {" >"}
+                {show?"show less<":"show more>"}
               </div>
 
             </div>
