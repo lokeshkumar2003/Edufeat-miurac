@@ -38,7 +38,7 @@ export default function Header() {
                     <div
                       className={`capitalize text-base ${
                         pathname.includes(item)
-                          ? "text-primary font-semibold"
+                          ? "text-gray font-semibold"
                           : ""
                       }`}
                     >

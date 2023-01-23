@@ -1,0 +1,12 @@
+.card{
+    
+/* position: absolute; */
+width: 400px;
+height: 515px;
+left: 0px;
+top: 60px;
+
+background: #FFFFFF;
+box-shadow: 0px 15px 45px rgba(150, 207, 255, 0.25);
+border-radius: 30px;
+}

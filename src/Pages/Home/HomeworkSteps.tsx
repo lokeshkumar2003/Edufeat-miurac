@@ -35,9 +35,9 @@ export default function HomeworkSteps() {
           <p className='py-4 text-center text-sm mb-10'>
             Get homework done fast with 100% accuracy with 24/7 expert help.
           </p>
-          <div className='grid  mx-auto sm:grid-cols-4 gap-6 place-items-center '>
+          <div className='grid  mx-auto md:grid-cols-4 gap-6 place-items-center '>
             {HomeworkStepsData.map((step, i) => (
-              <div className='bg-white  px-8 py-6 rounded-xl  md:w-auto h-72'>
+              <div className='bg-white  px-8 py-6 rounded-xl w-96 md:w-auto '>
                 <div className='text-hint font-medium text-lg'>
                   Step {i + 1}
                 </div>
