@@ -39,7 +39,7 @@ export default function Header() {
                       className={`capitalize text-base ${
                         pathname.includes(item)
                           ? "text-gray font-semibold"
-                          : ""
+                          : "text-primary"
                       }`}
                     >
                       {item}{" "}
@@ -62,14 +62,14 @@ export default function Header() {
                   opened={opened}
                   onClose={() => setOpened(false)}
                   position='top'
-                  padding="xl"
+                  padding="xs"
                   size="auto"
                   
                 >
                   {navbarItems.map((item, i) => (
                     <Link to={`/${item}`}>
                       <div
-                        className={`capitalize text-center  text-xl ${
+                        className={`capitalize text-center my-5 text-xl ${
                           pathname.includes(item)
                             ? "text-primary font-semibold"
                             : ""
@@ -81,7 +81,7 @@ export default function Header() {
                   ))}
                   <div className="text-base font-semibold">
                     <Link to="/tutor">
-                      <Button className=" bg-primary font-semibold  w-full" >
+                      <Button className=" bg-primary font-semibold  m-auto block" >
                         Account
                       </Button>
                     </Link>
