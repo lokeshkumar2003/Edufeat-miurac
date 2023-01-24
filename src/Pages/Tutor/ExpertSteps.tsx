@@ -106,7 +106,7 @@ export default function ExpertSteps() {
   if(!imgsLoaded) return <div className="w-full h-96 flex justify-center items-center"> <Loader variant="dots" /></div>
   return (
     <div className="bg-lotion py-24">
-      <Content>
+      {/* <Content> */}
         <div className="">
           <div className="heading text-primary text-center py-4 mb-[30px]">
             Become an expert in 4 easy steps
@@ -126,7 +126,7 @@ export default function ExpertSteps() {
                 { stepimage.map((item,i)=>{
                   return(
                     <Carousel.Slide>
-                      <img src={item.img} alt="img" className="mx-auto w-[564.69px] h-[476.79px]"/>
+                      <img src={item.img} alt="img" className="mx-auto md:w-[564px] md:h-[476px] object-contain "/>
                     </Carousel.Slide>
                   )
                 })
@@ -178,7 +178,7 @@ export default function ExpertSteps() {
             </Button>
           </div>
         </div>
-      </Content>
+      {/* </Content> */}
     </div>
   );
 }

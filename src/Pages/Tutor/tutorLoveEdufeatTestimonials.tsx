@@ -1,10 +1,19 @@
-import react from "react";
+import react,{useRef} from "react";
 import person1 from "../../Assets/tutor1.svg";
 import person2 from "../../Assets/tutor2.svg";
 import person3 from "../../Assets/tutor3.svg";
+import person4 from "../../Assets/tutor4.svg";
+import person5 from "../../Assets/tutor5.svg";
+import person6 from "../../Assets/tutor6.svg";
+import person7 from "../../Assets/tutor7.svg";
+import person8 from "../../Assets/tutor8.svg";
+import person9 from "../../Assets/tutor9.svg";
+import Autoplay from "embla-carousel-autoplay";
+import { Carousel } from "@mantine/carousel";
 import TutorLoveEdufeatCard from "../../Components/Cards/tutorLoveEdufeat";
 import Content from "../../Components/Layouts/Content";
-export default function tutorLoveEdufeat() {
+export default function TutorLoveEdufeat() {
+  const autoplay = useRef(Autoplay({ delay: 5000 }));
   const cards = [
     {
       img: person1,
@@ -27,6 +36,50 @@ export default function tutorLoveEdufeat() {
         "Cleared the BARC entrance and GATE exam (AIR250) without any coaching. After that, I cleared the BARC Scientific Officer interview and got selected. Currently working as Scientific Officer.",
     },
   ];
+  const card2 = [
+    {
+      img: person4,
+      name: "Nitish, NIT Silchar",
+      description:
+        "The day I got into the platform my life kind of changed and  I became economically independent. The learning which I got was very helpful in my academics and competitive exams. Will surely recommend to my juniors to work on this platform for great learning and earning.",
+    },
+
+    {
+      img: person5,
+      name: "Abhishek , NIT Kurukshetra",
+      description:
+        "EduFeat has made me a responsible person. I don't know how, but it has. I can manage my time easily now. Whenever there is a session at night, I manage my work in daytime so that i'm available for the session. Edufeat also taught me efficiency. I try to solve less problems but correctly thereby increasing my efficiency. Also it's a bit of a good practice to be in touch with JEE topics as they help me a lot today.",
+    },
+
+    {
+      img: person6,
+      name: "Manikanta, IIT Kharagpur",
+      description:
+        "Edufeat helped me learn things in different way besides good earnings. The preference of confirming or declining sessions is completely with the decision of myself which is great.",
+    },
+  ];
+  const card3 = [
+    {
+      img: person7,
+      name: "Prasanna, Manipal University",
+      description:
+        "I have earned money for the first time.I faced different questions, most of which were really interesting, and I learned a lot during my time here.",
+    },
+
+    {
+      img: person8,
+      name: "Biswajit Sharma, IIT BHU",
+      description:
+        "It provided me with the application platform for my knowledge. It also helped me to add up some new concept in my knowledge bag every moment.",
+    },
+
+    {
+      img: person9,
+      name: "Sumeet , Banaras Hindu University",
+      description:
+        "I didn't have to ask for money from my parents so it made me independent. And I got an insight in teaching as I myself provided solutions for questions so being on this side was very nice.",
+    },
+  ];
 
   return (
     <div className="bg-lightbg">
@@ -35,15 +88,61 @@ export default function tutorLoveEdufeat() {
           <div className="text-primary  text-center mb-10 pt-[90px] font-semibold text-[42px]">
             Tutor Love Edufeat
           </div>
-          <div className="flex gap-[30px] flex-wrap lg:flex-nowrap justify-center  ">
-            {cards.map((card, i) => (
-              <TutorLoveEdufeatCard
-                img={card.img}
-                name={card.name}
-                description={card.description}
-              />
-            ))}
-          </div>
+          {/* <div className="flex pb-[105px] md:gap-[30px] flex-wrap lg:flex-nowrap justify-center  "> */}
+            <Carousel
+            withIndicators
+            // height={576}
+            breakpoints={[
+              { maxWidth: 'md', slideSize: '50%' },
+              { maxWidth: 'sm', slideSize: '100%', slideGap: 0 },
+            ]}
+            plugins={[autoplay.current]}
+            slideGap="md"
+            loop
+            align="start"
+            >
+              <Carousel.Slide>
+                <div className="flex gap-8 pt-11 flex-wrap lg:flex-nowrap justify-center">
+                  {cards.map((card, i) => (
+                    <TutorLoveEdufeatCard
+                      img={card.img}
+                      name={card.name}
+                      description={card.description}
+                    />
+                  ))}
+                </div>
+              </Carousel.Slide>
+              <Carousel.Slide>
+              <div className="flex gap-8 p-11 flex-wrap lg:flex-nowrap justify-center">
+                {card2.map((card, i) => (
+                  <TutorLoveEdufeatCard
+                    img={card.img}
+                    name={card.name}
+                    description={card.description}
+                  />
+                ))}
+                </div>
+              </Carousel.Slide>
+              <Carousel.Slide>
+              <div className="flex gap-8 p-11 flex-wrap lg:flex-nowrap justify-center">
+                {card3.map((card, i) => (
+                  <TutorLoveEdufeatCard
+                    img={card.img}
+                    name={card.name}
+                    description={card.description}
+                  />
+                ))}
+                </div>
+              </Carousel.Slide>
+            </Carousel>
+            {/* {cards.map((card, i) => (
+                  <TutorLoveEdufeatCard
+                    img={card.img}
+                    name={card.name}
+                    description={card.description}
+                  />
+                ))} */}
+          {/* </div> */}
         </div>
       </Content>
     </div>

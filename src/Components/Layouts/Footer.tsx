@@ -35,7 +35,7 @@ export default function Footer() {
           <div className="flex flex-col md:flex-row gap-6 flex-wrap">
             <div className="flex-1 text-center md:text-left ">
               <div className="w-64 pt-[59px] mx-auto md:mx-0 ">
-                <img src={logo} alt="logo" />
+                <img src={logo} alt="logo"  className="w-[259px] h-[81px]"/>
               </div>
               <div className="w-64 pt-[15px]  mx-auto md:mx-0 text-white">
                 Office 901, 9th Floor, Ergo Tower, Sector V, Salt lake 700091

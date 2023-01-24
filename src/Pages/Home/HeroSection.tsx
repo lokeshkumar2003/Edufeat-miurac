@@ -25,7 +25,7 @@ export default function HeroSection() {
                   <img src={heart} alt="heart" />
                 </div>
                 <div className="max-w-xl grid gap-4">
-                  <div className="text-primary font-semibold text-6xl leading-relaxed ">
+                  <div className="text-primary font-semibold text-6xl  leading-relaxed ">
                     Best Academic helps with great prices!
                   </div>
                   <p className="py-4">

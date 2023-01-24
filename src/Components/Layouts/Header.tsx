@@ -38,8 +38,8 @@ export default function Header() {
                     <div
                       className={`capitalize text-base ${
                         pathname.includes(item)
-                          ? "text-gray font-semibold"
-                          : "text-primary"
+                          ? " text-primary font-semibold"
+                          : "text-gray"
                       }`}
                     >
                       {item}{" "}
@@ -72,7 +72,7 @@ export default function Header() {
                         className={`capitalize text-center my-5 text-xl ${
                           pathname.includes(item)
                             ? "text-primary font-semibold"
-                            : ""
+                            : "text-gray"
                         }`}
                       >
                         {item}{" "}
