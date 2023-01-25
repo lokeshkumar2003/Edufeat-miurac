@@ -32,19 +32,19 @@ export default function HomeworkSteps() {
           <div className='text-primary heading text-center mb-8'>
             Complete your Homework in 4 easy steps
           </div>
-          <p className='py-4 text-center text-sm mb-10'>
+          <p className='py-4 text-center text-base mb-10'>
             Get homework done fast with 100% accuracy with 24/7 expert help.
           </p>
           <div className='grid  mx-auto md:grid-cols-4 gap-6 place-items-center '>
             {HomeworkStepsData.map((step, i) => (
-              <div className='bg-white  px-8 py-6 rounded-xl w-96 md:w-auto '>
+              <div className='bg-white  px-8 pt-6 pb-12 rounded-xl w-96 md:w-auto md:h-72 '>
                 <div className='text-hint font-medium text-lg'>
                   Step {i + 1}
                 </div>
                 <h2 className='text-primary font-semibold text-center my-6 text-lg'>
                   {step.title}
                 </h2>
-                <p className=''>{step.description}</p>
+                <p className='text-justify'>{step.description}</p>
               </div>
             ))}
           </div>

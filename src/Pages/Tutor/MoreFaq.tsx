@@ -131,7 +131,7 @@ export const MoreFaqAccordionComponent = () => {
     >
       {AccordionData.map((item, i) => {
         return (
-          <Accordion.Item value={`item-${i}`}>
+          <Accordion.Item className='border-[#F0F7FD] border-2' value={`item-${i}`}>
             <AccordionControl chevron={value === `item-${i}`?<img src={close} alt="close" />:<ChevronIcon />} >
               <h2 className="text-primary text-lg font-medium">{item.title}</h2>
             </AccordionControl>

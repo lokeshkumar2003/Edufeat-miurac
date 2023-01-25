@@ -29,7 +29,7 @@ export default function PopularAmongStudents() {
     <div className='bg-lightSkyBlue py-20'>
       <Content>
         <div className='items-center'>
-          <div className='text-primary  font-semibold text-center mb-16 text-[42px]'>
+          <div className='text-primary  font-semibold text-center mb-16 text-[36px]'>
             We are we popular among students for
           </div>
           <div className='flex md:w-4/5 mx-auto flex-wrap gap-6 justify-center align-center '>

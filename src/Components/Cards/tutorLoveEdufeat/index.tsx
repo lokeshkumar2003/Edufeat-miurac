@@ -12,12 +12,12 @@ type personProps = {
 export default function tutorLoveEdufeatCard(props: personProps) {
   const { img, name, description } = props;
   return (
-    <div className="">
-      <div>
+    <div className="relative">
+      <div className="relative">
         <img
           src={img}
-          alt="tutor-dp"
-          className=" absolute w-[120px] h-[120px] px-[140px]  "
+          alt={`${name} profile pic`}
+          className=" absolute w-[120px] h-[120px] px-[140px] -top-[60px]  "
         />
       </div>
       <div className="pb-[106px]">
@@ -26,12 +26,24 @@ export default function tutorLoveEdufeatCard(props: personProps) {
           <div className="font-sans font-semibold text-[22px] text-primary text-center pt-[94px]">
             {name}
           </div>
-          <div className="relative z-0">
-            <div className="absolute text-[400px] z-0 text-gray-light" style={{lineHeight:"0px"}}>,</div>
-            <p className="font-sans font-normal px-[40px] absolute z-10 text-justify pt-[89.5px] text-[16px]">
+          <div className="relative ">
+            <div
+              className="comma_flip absolute text-[500px] z-0 text-[#F0F0F0] "
+              style={{ lineHeight: "0px", fontFamily: "Oswald" }}
+            >
+              ,
+            </div>
+            <div
+              className="comma_right absolute text-[500px] z-0 text-[#F0F0F0] "
+              style={{ lineHeight: "0px", fontFamily: "Oswald" }}
+            >
+              ,
+            </div>
+            <div className="absolute font-sans font-normal px-[40px] text-justify pt-[89.5px] text-[16px] z-10">
               {description}
-            </p>
+            </div>
           </div>
+
           {/* <div>,</div> */}
         </div>
         {/* </Content> */}

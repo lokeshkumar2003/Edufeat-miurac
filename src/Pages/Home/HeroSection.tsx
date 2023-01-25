@@ -16,7 +16,7 @@ export default function HeroSection() {
       <Content>
         <>
           <div className="items-center ">
-            <div className="grid md:grid-cols-2 py-11 justify-between items-center gap-[157px]">
+            <div className="grid md:grid-cols-2 py-11 justify-between items-center md:gap-[157px]">
               <div className="">
                 <div className="flex items-center gap-[5px] flex-row ">
                   <div className="font-semibold text-lg font-sans">
@@ -25,7 +25,7 @@ export default function HeroSection() {
                   <img src={heart} alt="heart" />
                 </div>
                 <div className="max-w-xl grid gap-4">
-                  <div className="text-primary font-semibold text-6xl leading-relaxed ">
+                  <div className="text-primary font-semibold text-6xl  leading-relaxed ">
                     Best Academic helps with great prices!
                   </div>
                   <p className="py-4">
@@ -41,7 +41,7 @@ export default function HeroSection() {
                           className="text-white bg-primary"
                           size="md"
                         >
-                          Become a Tutor
+                          Get Started
                         </Button>
                       </Link>
                     </div>
@@ -67,7 +67,7 @@ export default function HeroSection() {
                 <img className="w-[50px] h-[50px] " src={item.img} alt="" />
                 <div className="font-gray">
                   <p className="font-semibold mb-2 text-lg">{item.title}</p>
-                  <p className="text-sm absolute">{item.description}</p>
+                  <p className="text-sm ">{item.description}</p>
                 </div>
               </div>
             ))}

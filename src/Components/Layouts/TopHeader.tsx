@@ -10,7 +10,7 @@ export default function TopHeader() {
         <div className="h-[8.5] py-3 md:py-2  flex flex-start sticky ">
           <div className="items-center md:flex-start flex flex-start w-[85%] gap-2 ">
             <img src={whatsapp} alt="whatsapp"></img>
-            <div className="font-semibold text-green ">
+            <div className="font-semibold text-green  ">
              <span className="hidden md:inline-block">WhatsApp for any query :</span>  +91 7082686818
             </div>
           </div>
@@ -22,7 +22,7 @@ export default function TopHeader() {
                   alt="person"
                   className="pt-2 w-[20px] h-[20px]"
                 ></img>
-                <div className="font-semibold text-white pt-2 md:flex ">
+                <div className="font-semibold text-white pt-2 w-40  ">
                   Become a Tutor
                 </div>
               </div>

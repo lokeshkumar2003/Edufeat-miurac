@@ -32,7 +32,7 @@ export default function HeroSection() {
         <div className="grid md:grid-cols-2 py-11 justify-between items-center">
           <div className="">
             <div className="max-w-xl grid gap-4">
-              <div className="text-primary font-semibold text-6xl leading-relaxed ">
+              <div className="text-primary font-semibold text-[32px]  md:text-6xl md:leading-relaxed ">
                 Earn with Edufeat by tutoring online.
               </div>
               <p className="py-4">
@@ -55,38 +55,41 @@ export default function HeroSection() {
               </div>
             </div>
           </div>
-          <Carousel
-            loop
-            align="start"
-            draggable={false}
-            classNames={classes}
-            plugins={[autoplay.current]}
-            onMouseEnter={autoplay.current.stop}
-            onMouseLeave={autoplay.current.reset}
-          >
-            <Carousel.Slide>
-              <img
-                src={heroSectionimg}
-                className="object-cover md:h-80 mx-auto"
-                alt="img  "
-              />
-              {/* <div className=" my-8 text-center">
-                Work anytime, anywhere, Get paid!
-              </div> */}
-            </Carousel.Slide>
-            <Carousel.Slide>
-              <div className="">
+          <div className="pt-[49px]">
+            <Carousel
+              loop
+              align="start"
+              draggable={false}
+              classNames={classes}
+              plugins={[autoplay.current]}
+              onMouseEnter={autoplay.current.stop}
+              onMouseLeave={autoplay.current.reset}
+            >
+              <Carousel.Slide>
                 <img
-                  src={heroSectionImg2}
-                  className="object-cover md:h-80 mx-auto "
+                  src={heroSectionimg}
+                  className="object-cover md:h-80 mx-auto"
                   alt="img  "
                 />
-                {/* <div className=" my-8 text-center ">
+                {/* <div className=" my-8 text-center">
+                Work anytime, anywhere, Get paid!
+              </div> */}
+              </Carousel.Slide>
+              <Carousel.Slide>
+                <div className="">
+                  <img
+                    src={heroSectionImg2}
+                    className="object-cover md:h-80 mx-auto "
+                    alt="img  "
+                  />
+                  {/* <div className=" my-8 text-center ">
                   Build Your Future With Us!
                 </div> */}
-              </div>
-            </Carousel.Slide>
-          </Carousel>
+                </div>
+              </Carousel.Slide>
+            </Carousel>
+          </div>
+
           {/* <div className="flex items-center gap-4 justify-center">
             <div className="bg-primary w-6 h-6 flex justify-center items-center text-white rounded-xl text-lg cursor-pointer">
               {"<"}
