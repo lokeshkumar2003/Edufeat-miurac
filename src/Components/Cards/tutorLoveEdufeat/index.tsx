@@ -16,8 +16,9 @@ export default function tutorLoveEdufeatCard(props: personProps) {
       <div className="relative">
         <img
           src={img}
-          alt="image"
-          className=" absolute w-[120px] h-[120px] px-[140px] -top-[60px]  "
+          alt={`${name} profile pic`}
+          style={{left:"0"}}
+          className=" absolute w-[120px] h-[120px]  -top-[60px]  "
         />
       </div>
       <div className="pb-[106px]">
@@ -27,8 +28,18 @@ export default function tutorLoveEdufeatCard(props: personProps) {
             {name}
           </div>
           <div className="relative ">
-            <div className="comma_flip absolute text-[500px] z-0 text-[#F0F0F0] " style={{lineHeight:"0px", fontFamily:'Oswald'}}>,</div>
-            <div className="comma_right absolute text-[500px] z-0 text-[#F0F0F0] " style={{lineHeight:"0px", fontFamily:'Oswald'}}>,</div>
+            <div
+              className="comma_flip absolute text-[500px] z-0 text-[#F0F0F0] "
+              style={{ lineHeight: "0px", fontFamily: "Oswald" }}
+            >
+              ,
+            </div>
+            <div
+              className="comma_right absolute text-[500px] z-0 text-[#F0F0F0] "
+              style={{ lineHeight: "0px", fontFamily: "Oswald" }}
+            >
+              ,
+            </div>
             <div className="absolute font-sans font-normal px-[40px] text-justify pt-[89.5px] text-[16px] z-10">
               {description}
             </div>
