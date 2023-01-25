@@ -6,7 +6,7 @@ import HeroSection from './HeroSection'
 import Subjects from './Subjects'
 import './styles.css'
 // import TutorLoveEdufeat from './TutorLoveEdufeat'
-import TutorLoveEdufeatTestimonials from "./TutorLoveEdufeatTestimonials"
+import TutorLoveEdufeatTestimonials from "./tutorLoveEdufeatTestimonials"
 export default function Tutor() {
   return (
     <div>

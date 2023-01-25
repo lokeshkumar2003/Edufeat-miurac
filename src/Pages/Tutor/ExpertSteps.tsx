@@ -1,6 +1,6 @@
-import Content from "../../Components/Layouts/Content";
+// import Content from "../../Components/Layouts/Content";
 import img from "../../Assets/expert.png";
-import { Button, createStyles, Loader, Stepper } from "@mantine/core";
+import { Button, Container, createStyles, Loader, Stepper } from "@mantine/core";
 import { useState, useEffect, useRef } from "react";
 import useImage from 'use-image';
 import BenifitStepsCard from "../../Components/Cards/ExpertStepsCard";
@@ -9,8 +9,10 @@ import tick2 from "../../Assets/tick2.svg";
 import img2 from "../../Assets/Online screening.png";
 import img3 from "../../Assets/Verification.png";
 import img4 from "../../Assets/Start answering.png";
-import { Carousel } from "@mantine/carousel";
-import Autoplay from "embla-carousel-autoplay";
+// import { Carousel } from "@mantine/carousel";
+// import Autoplay from "embla-carousel-autoplay";
+import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
+import { Carousel } from 'react-responsive-carousel';
 
 const useStyles = createStyles((_theme, _params, getRef) => ({
   controls: {
@@ -44,7 +46,7 @@ const stepimage=[
 ]
 export default function ExpertSteps() {
   const { classes } = useStyles();
-  const autoplay = useRef(Autoplay({ delay: 5000 }));
+  // const autoplay = useRef(Autoplay({ delay: 5000 }));
   const [imgsLoaded, setImgsLoaded] = useState(false);
   const [active, setActive] = useState(0);
   useEffect(() => {
@@ -106,28 +108,36 @@ export default function ExpertSteps() {
   if(!imgsLoaded) return <div className="w-full h-96 flex justify-center items-center"> <Loader variant="dots" /></div>
   return (
     <div className="bg-lotion py-24">
-      <Content>
-        <div className="">
+      {/* <Container> */}
+        <div className="mx-auto">
           <div className="heading text-primary text-center py-4 mb-[30px]">
             Become an expert in 4 easy steps
           </div>
-          <div className="grid md:grid-cols-2 gap-20 ">
+          <div className="grid w-full md:grid-cols-2 gap-20 ">
             <div className="">
               <Carousel
-                mx="auto"
-                loop
-                align="center"
-                slideSize="100%"
-                draggable={false}
-                classNames={classes}
-                plugins={[autoplay.current]}
-                withControls={false}
+                // mx="auto"
+                // w={"100%"}
+                // loop
+                // align="center"
+                // slideSize="100%"
+                className=""
+                showArrows={false}
+                showThumbs={false}
+                showIndicators={false}
+                selectedItem={active}
+                showStatus={false}
+                // draggable={false}
+                // classNames={classes}
+                // plugins={[autoplay.current]}
+                // withControls={false}
+                
               >
                 { stepimage.map((item,i)=>{
                   return(
-                    <Carousel.Slide>
-                      <img src={item.img} alt="img" className="mx-auto w-full md:w-[564px] md:h-[476px] object-contain "/>
-                    </Carousel.Slide>
+                    <div key={i}>
+                      <img src={item.img} alt="img" style={{width:"calc(100% - 40px)"}} className="mx-auto md:h-[476px] object-contain "/>
+                    </div>
                   )
                 })
 
@@ -137,7 +147,7 @@ export default function ExpertSteps() {
             <div className="">
               <Stepper
                 active={active}
-                // onStepClick={setActive}
+                onStepClick={setActive}
                 orientation="vertical"
                 size="sm"
                 className="expert"
@@ -163,6 +173,7 @@ export default function ExpertSteps() {
                     <Stepper.Step
                       label={item.label}
                       description={item.description}
+                      style={{width:"calc(100% - 40px)"}}
                       className={active === i ? "active" : ""}
                       // completedIcon={<img src={tick} alt="tick" />}
                       icon={<img src={tick2} alt="tick" />}
@@ -178,7 +189,7 @@ export default function ExpertSteps() {
             </Button>
           </div>
         </div>
-      </Content>
+      {/* </Container> */}
     </div>
   );
 }
