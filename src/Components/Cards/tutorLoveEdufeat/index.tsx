@@ -16,7 +16,7 @@ export default function tutorLoveEdufeatCard(props: personProps) {
       <div>
         <img
           src={img}
-          alt="image"
+          alt="tutor-dp"
           className=" absolute w-[120px] h-[120px] px-[140px]  "
         />
       </div>
@@ -26,10 +26,12 @@ export default function tutorLoveEdufeatCard(props: personProps) {
           <div className="font-sans font-semibold text-[22px] text-primary text-center pt-[94px]">
             {name}
           </div>
-          {/* <div className="">,</div> */}
-          <p className="font-sans font-normal px-[40px] text-justify pt-[89.5px] text-[16px]">
-            {description}
-          </p>
+          <div className="relative z-0">
+            <div className="absolute text-[400px] z-0 text-gray-light" style={{lineHeight:"0px"}}>,</div>
+            <p className="font-sans font-normal px-[40px] absolute z-10 text-justify pt-[89.5px] text-[16px]">
+              {description}
+            </p>
+          </div>
           {/* <div>,</div> */}
         </div>
         {/* </Content> */}
