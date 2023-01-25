@@ -125,7 +125,7 @@ export default function ExpertSteps() {
               >
                 { stepimage.map((item,i)=>{
                   return(
-                    <Carousel.Slide>
+                    <Carousel.Slide className="">
                       <img src={item.img} alt="img" className="mx-auto w-full md:w-[564px] md:h-[476px] object-contain "/>
                     </Carousel.Slide>
                   )
