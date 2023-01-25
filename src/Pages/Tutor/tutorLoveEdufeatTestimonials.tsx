@@ -1,4 +1,4 @@
-import react, { useRef } from "react";
+import react, { useEffect, useRef, useState } from "react";
 import person1 from "../../Assets/tutor1.svg";
 import person2 from "../../Assets/tutor2.svg";
 import person3 from "../../Assets/tutor3.svg";
@@ -9,6 +9,7 @@ import person7 from "../../Assets/tutor7.svg";
 import person8 from "../../Assets/tutor8.svg";
 import person9 from "../../Assets/tutor9.svg";
 import Autoplay from "embla-carousel-autoplay";
+import { useMediaQuery } from '@mantine/hooks';
 // import { Carousel } from "@mantine/carousel";
 import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
 import { Carousel } from "react-responsive-carousel";
@@ -16,6 +17,16 @@ import TutorLoveEdufeatCard from "../../Components/Cards/tutorLoveEdufeat";
 import Content from "../../Components/Layouts/Content";
 export default function TutorLoveEdufeat() {
   // const autoplay = useRef(Autoplay({ delay: 5000 }));
+  const mobile = useMediaQuery('(max-width: 900px)');
+  const tab = useMediaQuery('(max-width: 1200px)');
+  const pcDesktop = useMediaQuery('(min-width: 1199px)');
+  const [step, setStep] = useState(2)
+  useEffect(() => {
+    if(mobile) setStep(1)
+    if(tab) setStep(2)
+    if(pcDesktop) setStep(3)
+  }, [mobile,tab,pcDesktop])
+  
   const cards = [
     {
       img: person1,
@@ -84,6 +95,7 @@ export default function TutorLoveEdufeat() {
   // const card3 = [
 
   // ];
+console.log(Math.ceil(cards.length/step));
 
   return (
     <div className="bg-lightbg">
@@ -106,19 +118,33 @@ export default function TutorLoveEdufeat() {
             // align="start"
             showArrows={false}
             showThumbs={false}
+            autoPlay
             showIndicators={true}
             // selectedItem={active}
             showStatus={false}
           >
-            {cards.map((card, i) => (
-              <div className="flex gap-8 pt-11 flex-wrap lg:flex-nowrap justify-center">
+            {Array(Math.ceil(cards.length/step)).fill(0).map((_,d)=>(
+              <div className="flex gap-8 pt-14 flex-wrap lg:flex-nowrap justify-center">
+                {cards.slice(d*step,((d+1)*step)).map((card, i) =>(
+                  <TutorLoveEdufeatCard
+                  img={card.img}
+                  name={card.name}
+                  description={card.description}
+                />
+                ))}
+              </div>
+            ))}
+            {/* {cards.map((card, i) => {
+              const length = cards.length
+              return <div className="flex gap-8 pt-11 flex-wrap lg:flex-nowrap justify-center">
                 <TutorLoveEdufeatCard
                   img={card.img}
                   name={card.name}
                   description={card.description}
                 />
               </div>
-            ))}
+            }
+            )} */}
           </Carousel>
           {/* {cards.map((card, i) => (
                   <TutorLoveEdufeatCard
