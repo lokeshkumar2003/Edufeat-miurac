@@ -8,12 +8,18 @@ export default function TopHeader() {
     <div className=" bg-gray">
       <Content>
         <div className="h-[8.5] py-3 md:py-2  flex flex-start sticky ">
-          <div className="items-center md:flex-start flex flex-start w-[85%] gap-2 ">
-            <img src={whatsapp} alt="whatsapp"></img>
-            <div className="font-semibold text-green  ">
-             <span className="hidden md:inline-block">WhatsApp for any query :</span>  +91 7082686818
+          <a href="https://web.whatsapp.com/send?phone=+917082686818" target="_blank" className="items-center md:flex-start flex flex-start w-[85%] gap-2">
+            <div className="items-center md:flex-start flex flex-start w-[85%] gap-2 ">
+              <img src={whatsapp} alt="whatsapp"></img>
+              <div className="font-semibold text-green  ">
+                <span className="hidden md:inline-block">
+                  WhatsApp for any query :
+                </span>{" "}
+                +91 7082686818
+              </div>
             </div>
-          </div>
+          </a>
+
           <Link to="/tutor">
             <div>
               <div className="flex items-center   gap-2 ">
