@@ -6,7 +6,7 @@ function AccordionControl(props: AccordionControlProps) {
   return (
     <Box sx={{ display: "flex", alignItems: "center" }}>
       <Accordion.Control {...props} />
-      <ActionIcon size="lg"></ActionIcon>
+      {/* <ActionIcon size="lg"></ActionIcon> */}
     </Box>
   );
 }
@@ -112,6 +112,7 @@ export const FaqAccordionComponent = () => {
       onChange={setValue}
       disableChevronRotation
       
+      
       // styles={{
       //   chevron: {
           
@@ -125,7 +126,7 @@ export const FaqAccordionComponent = () => {
       {AccordionData.map((item, i) => {
         return (
           <Accordion.Item className='border-[#F0F7FD] border-2' value={`item-${i}`}>
-            <AccordionControl
+            <AccordionControl 
               chevron={
                 value === `item-${i}` ? (
                   <img src={close} alt="close" />

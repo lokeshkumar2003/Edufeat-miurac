@@ -9,8 +9,8 @@ import { BsInstagram } from "react-icons/bs";
 import Content from "./Content";
 import { Button } from "@mantine/core";
 const footerItems = [
-  ["about", "contact", "blog", "login"],
-  ["privacy policy", "refund policy", "terms & conditions"],
+  ["about", "contact", "terms & conditions"],
+  ["privacy policy", "refund policy"],
 ];
 
 const socialMedias = [
@@ -32,7 +32,7 @@ export default function Footer() {
     <div className="  bg-darkblue  py-3 text-sm">
       <Content>
         <div className="">
-          <div className="flex flex-col md:flex-row gap-6 flex-wrap">
+          <div className="flex flex-col md:flex-row  flex-wrap">
             <div className="flex-1 text-center md:text-left ">
               <div className="w-64 pt-[59px] mx-auto md:mx-0 ">
                 <img src={logo} alt="logo"  className="w-[259px] h-[81px]"/>
@@ -46,7 +46,7 @@ export default function Footer() {
               <div className="flex md:gap-[70px]  flex-col md:flex-row items-start">
                 {footerItems.map((arr, i) => (
                   <div className="w-full pt-8 md:pt-0">
-                    <div className="ul list-none grid gap-[26px] ">
+                    <div className="ul list-none grid gap-[26px]">
                       {arr.map((item, i) => (
                         <Link
                           to={`/${item.split(" ")[0]}`}
@@ -64,7 +64,7 @@ export default function Footer() {
 
                 <div className="grid gap-4 w-full ">
                   <div className="grid gap-4 order-last md:order-first w-64 md:w-full mx-auto  text-base">
-                    <div className="flex gap-1  text-white flex-row">
+                    <div className="flex gap-1  text-white flex-row ">
                       <AiOutlineMail size={20} />
                       Email:support@edufeat.com
                     </div>
@@ -92,9 +92,9 @@ export default function Footer() {
               </div>
             </div>
           </div>
-          <div className="my-4 flex gap-4 items-center md:justify-start justify-center">
+          <div className="my-4 flex gap-[96px] md:gap-4 items-center md:justify-start justify-center">
             {socialMedias.map((social, i) => (
-              <div className="flex gap-2  items-center text-xl text-white">
+              <div className="flex gap-2 items-center text-xl text-white">
                 {social.icon}
                 <div className="text-sm text-white md:inline-block hidden">{social.label} </div>
               </div>

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useCallback } from "react";
 import { Link } from "react-router-dom";
 import Content from "../../Components/Layouts/Content";
 import img from "../../Assets/editorimg.svg";
@@ -9,8 +9,31 @@ import smile from "../../Assets/smile.svg";
 import { Button } from "@mantine/core";
 import heart from "../../Assets/heart.svg";
 import verified from "../../Assets/verified.svg";
+import { RichTextEditor } from "@mantine/rte";
+import spiral from "../../Assets/spiral.svg";
+import herosectionpic from "../../Assets/herosectionpic.svg";
 
 export default function HeroSection() {
+  const handleImageUpload = useCallback(
+    (file: File): Promise<string> =>
+      new Promise((resolve, reject) => {
+        const formData = new FormData();
+        formData.append("image", file);
+
+        fetch("https://api.imgbb.com/1/upload?key=api_key", {
+          method: "POST",
+          body: formData,
+        })
+          .then((response) => response.json())
+          .then((result) => resolve(result.data.url))
+          .catch(() => reject(new Error("Upload failed")));
+      }),
+    []
+  );
+
+  const [value, onChange] = useState(
+    "<p>Type your question here or add files</p>"
+  );
   return (
     <div className="bg-lightSkyBlue">
       <Content>
@@ -52,8 +75,46 @@ export default function HeroSection() {
                   </div>
                 </div>
               </div>
-              <div className="mx-auto">
+              {/* <div className="mx-auto">
                 <img src={img} className="object-cover  " alt="img  " />
+              </div> */}
+              <div>
+                <div className="font-semibold text-lg pb-[12px] text-center font-sans">
+                  Got a question? We have the Answer.
+                </div>
+                <div className=" flex ">
+                  <div className="2xl:hidden md:visible">
+                    <img src={herosectionpic} alt="hero" />
+                  </div>
+                  <RichTextEditor
+                    id="rte"
+                    value={value}
+                    onChange={onChange}
+                    formats={["bold", "italic", "underline"]}
+                    controls={[["bold", "underline"]]}
+                    className="w-[323px] h-[327px] md:w-[392px] md:h-[327px] justify-center rounded-2xl   "
+                    onImageUpload={handleImageUpload}
+                    classNames={{ toolbarControl: "border-none bg-[#4a4a68] text-white hover:bg-[#ffffff22]", toolbar: "bg-[#4a4a68] rounded-t-2xl" }}
+                    // styles={{
+                    //   toolbar: {
+                    //     backgroundColor: "#4A4A68",
+                    //     borderRadius: "16px 16px 0px 0px ",
+                    //     alignItems: "center",
+                    //     height: "45px",
+                    //     position:"sticky",
+                    //   },
+                    //   toolbarControl:{
+                        
+                    //   }
+                    // }}
+                  />
+                </div>
+                <div className="pt-[15px] w-full h-full flex justify-center gap-[40px] ">
+                  <img src={spiral} alt="spiral" className="2xl:hidden md:visible" />
+                  <a href="https://tutor.edufeat.com" target="_blank">
+                    <Button className="bg-primary">Get Solution</Button>
+                  </a>
+                </div>
               </div>
             </div>
           </div>

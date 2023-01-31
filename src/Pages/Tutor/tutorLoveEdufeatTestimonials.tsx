@@ -10,6 +10,7 @@ import person8 from "../../Assets/tutor8.svg";
 import person9 from "../../Assets/tutor9.svg";
 import Autoplay from "embla-carousel-autoplay";
 import { useMediaQuery } from '@mantine/hooks';
+import personf1 from "../../Assets/tutorf1.jpg";
 // import { Carousel } from "@mantine/carousel";
 import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
 import { Carousel } from "react-responsive-carousel";
@@ -30,7 +31,7 @@ export default function TutorLoveEdufeat() {
   const cards = [
     {
       img: person1,
-      name: "Gaurav Dange, MANIT Bhopal",
+      name: "Apurva Talashilkar , Somaiya Vidyavihar University",
       description:
         "Overall experience was really good. It is best in terms of a part time job. Also one has totally flexibility on choosing the assignment to work on and if break from the worm required. You can continue the work when you are able to. ",
     },
@@ -122,6 +123,8 @@ console.log(Math.ceil(cards.length/step));
             showIndicators={true}
             // selectedItem={active}
             showStatus={false}
+            swipeable={false}
+            infiniteLoop={true}
           >
             {Array(Math.ceil(cards.length/step)).fill(0).map((_,d)=>(
               <div className="flex gap-8 pt-14 flex-wrap lg:flex-nowrap justify-center">

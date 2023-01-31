@@ -8,7 +8,7 @@ function AccordionControl(props: AccordionControlProps) {
   return (
     <Box sx={{ display: "flex", alignItems: "center" }}>
       <Accordion.Control {...props} />
-      <ActionIcon size="lg"></ActionIcon>
+      {/* <ActionIcon size="lg"></ActionIcon> */}
     </Box>
   );
 }
