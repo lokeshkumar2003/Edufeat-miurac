@@ -16,6 +16,7 @@ export default function Header() {
   useEffect(() => {
     window.onscroll = () => {
       if (window.pageYOffset > 0) {
+        
         setIsHidden(true);
       } else {
         setIsHidden(false);

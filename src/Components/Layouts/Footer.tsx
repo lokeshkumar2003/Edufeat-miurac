@@ -17,14 +17,17 @@ const socialMedias = [
   {
     icon: <FaLinkedinIn />,
     label: "Linked in",
+    url: "https://www.linkedin.com/company/edufeat/"
   },
   {
     icon: <BsInstagram />,
     label: "Instagram",
+    url:"https://www.instagram.com/edufeat/"
   },
   {
     icon: <FaFacebookF />,
     label: "Facebook",
+    url:"https://www.facebook.com/edufeat"
   },
 ];
 export default function Footer() {
@@ -94,10 +97,13 @@ export default function Footer() {
           </div>
           <div className="my-4 flex gap-[96px] md:gap-4 items-center md:justify-start justify-center">
             {socialMedias.map((social, i) => (
+              <Link to={{pathname:social.url}} target="_blank">
+
               <div className="flex gap-2 items-center text-xl text-white">
                 {social.icon}
                 <div className="text-sm text-white md:inline-block hidden">{social.label} </div>
               </div>
+              </Link>
             ))}
           </div>
           <div className="max-w-3x text-center text-[10px]  grid gap-1 ">

@@ -90,12 +90,6 @@ export default function TutorLoveEdufeat() {
         "I didn't have to ask for money from my parents so it made me independent. And I got an insight in teaching as I myself provided solutions for questions so being on this side was very nice.",
     },
   ];
-  // const card2 = [
-
-  // ];
-  // const card3 = [
-
-  // ];
 console.log(Math.ceil(cards.length/step));
 
   return (

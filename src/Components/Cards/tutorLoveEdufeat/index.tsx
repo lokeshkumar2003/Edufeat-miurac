@@ -12,7 +12,7 @@ type personProps = {
 export default function tutorLoveEdufeatCard(props: personProps) {
   const { img, name, description } = props;
   return (
-    <div className="relative">
+    <div className="relative ">
       <div className="relative">
         <img
           src={img}

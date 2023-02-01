@@ -79,7 +79,10 @@ export default function HeroSection() {
                 <img src={img} className="object-cover  " alt="img  " />
               </div> */}
               <div>
-                <div className="font-semibold text-lg pb-[12px] text-center font-sans">
+                <div className="font-semibold text-lg pb-[12px] text-center text-gray " style={{
+                  fontFamily:"Poppins",
+                  
+                }}>
                   Got a question? We have the Answer.
                 </div>
                 <div className=" flex ">
@@ -92,7 +95,7 @@ export default function HeroSection() {
                     onChange={onChange}
                     formats={["bold", "italic", "underline"]}
                     controls={[["bold", "underline"]]}
-                    className="w-[323px] h-[327px] md:w-[392px] md:h-[327px] justify-center rounded-2xl   "
+                    className="w-[323px] h-[327px] md:w-[392px] md:h-[327px] justify-center rounded-2xl overflow-hidden   "
                     onImageUpload={handleImageUpload}
                     classNames={{ toolbarControl: "border-none bg-[#4a4a68] text-white hover:bg-[#ffffff22]", toolbar: "bg-[#4a4a68] rounded-t-2xl" }}
                     // styles={{

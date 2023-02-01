@@ -10,6 +10,8 @@ import Home from './Pages/Home'
 import Subjects from './Pages/Subjects'
 import Tutor from './Pages/Tutor'
 import Terms from './Pages/Terms and Conditions'
+import Privacy from './Pages/Privacy policy'
+import Refund from './Pages/Refund Policy'
 function App() {
   return (
     <div >
@@ -20,6 +22,8 @@ function App() {
         <Route path='/about' element={<About />} />
         <Route path='/subject' element={<Subjects />} />
         <Route path='/terms' element={<Terms />} />
+        <Route path='/privacy' element={<Privacy />} />
+        <Route path='/refund' element={<Refund />} />
 
       </Routes>
 
