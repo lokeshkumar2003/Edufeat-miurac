@@ -12,18 +12,18 @@ type personProps = {
 export default function tutorLoveEdufeatCard(props: personProps) {
   const { img, name, description } = props;
   return (
-    <div className="relative w-full ">
-      <div className="relative">
+    <div className="relative w-full  ">
+      <div style={{left:"calc(50% - 60px)"}} className="absolute h-[120px] w-[120px]  -top-16">
         <img
           src={img}
           alt={`${name} profile pic`}
           // style={{left:"0"}}
-          className="  h-[120px] w-[120px] block  "
+          className="   block  "
         />
       </div>
-      <div className="pb-[106px]">
+      <div className="pb-[106px] ">
         {/* <Content> */}
-        <div className="w-[400px] h-[515px] bg-white rounded-[30px] ">
+        <div className="max-w-[400px] h-[515px] bg-white rounded-[30px] mx-auto ">
           <div className="font-sans font-semibold text-[22px] text-primary text-center pt-[94px]">
             {name}
           </div>

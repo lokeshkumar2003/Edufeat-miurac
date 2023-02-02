@@ -36,7 +36,7 @@ export default function Header() {
   const { pathname } = useLocation();
   return (
     <div className="sticky top-0 z-50">
-      <div style={{height: hide || pathname === "/tutor" ?"0px":"60px", transition:"height 400ms"}} className="overflow-hidden">
+      <div style={{height: hide || pathname === "/tutor" ?"0px":"50px", transition:"height 400ms"}} className="overflow-hidden">
         
                 {pathname !== "/tutor" && <TopHeader />}
       </div>
