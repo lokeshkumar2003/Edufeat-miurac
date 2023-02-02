@@ -7,6 +7,7 @@ import hamburger from "../../Assets/Hamburger.svg";
 import { Button } from "@mantine/core";
 import TopHeader from "./TopHeader";
 import { Drawer, Group } from "@mantine/core";
+import "./Styles.css"
 
 
 const navbarItems = ["about", "subject", "contact", "login"];
@@ -25,7 +26,7 @@ export default function Header() {
     };
   }, []);
 
-  const [opened, setOpened] = useState(false);
+  const [open, setOpen] = useState(false);
   const [nav, setNav] = useState(false);
   const handleClick = () => setNav(!nav);
 
@@ -35,13 +36,11 @@ export default function Header() {
   const { pathname } = useLocation();
   return (
     <div className="sticky top-0 z-50">
-      
-      <div style={{display: hide ? 'none' : 'block'}}>
-
-          {pathname !== "/tutor" && <TopHeader />}
-      </div>
+      <div style={{height: hide || pathname === "/tutor" ?"0px":"60px", transition:"height 400ms"}} className="overflow-hidden">
         
-      
+                {pathname !== "/tutor" && <TopHeader />}
+      </div>
+
       <div className=" bg-white shadow-headerShadow py-3 md:py-2   ">
         <Content>
           <div className="flex items-center ">
@@ -53,31 +52,33 @@ export default function Header() {
 
             <div className="ml-auto  ">
               <div className="hidden md:flex text-gray items-center gap-10 ">
-                {navbarItems.map((item, i) => (
-                  i<3
-                  ?<Link to={`/${item}`}>
-                    <div
-                      className={`capitalize text-base ${
-                        pathname.includes(item)
-                          ? " text-primary font-semibold"
-                          : "text-gray"
-                      }`}
-                    >
-                      {item}{" "}
-                    </div>
-                  </Link>
-                  :<a href="https://tutor.edufeat.com/login">
-                  <div
-                    className={`capitalize text-base ${
-                      pathname.includes(item)
-                        ? " text-primary font-semibold"
-                        : "text-gray"
-                    }`}
-                  >
-                    {item}{" "}
-                  </div>
-                </a>
-                ))}
+                {navbarItems.map((item, i) =>
+                  i < 3 ? (
+                    <Link to={`/${item}`}>
+                      <div
+                        className={`capitalize text-base ${
+                          pathname.includes(item)
+                            ? " text-primary font-semibold"
+                            : "text-gray"
+                        }`}
+                      >
+                        {item}{" "}
+                      </div>
+                    </Link>
+                  ) : (
+                    <a href="https://tutor.edufeat.com/login">
+                      <div
+                        className={`capitalize text-base ${
+                          pathname.includes(item)
+                            ? " text-primary font-semibold"
+                            : "text-gray"
+                        }`}
+                      >
+                        {item}{" "}
+                      </div>
+                    </a>
+                  )
+                )}
                 <div className="text-base font-semibold">
                   <a href="https://tutor.edufeat.com/">
                     <Button className=" bg-primary font-semibold" size="md">
@@ -91,37 +92,39 @@ export default function Header() {
               </div>
               <div className="">
                 <Drawer
-                  opened={opened}
-                  onClose={() => setOpened(false)}
+                  opened={open}
+                  onClose={() => setOpen(false)}
                   position="top"
                   padding="xs"
                   size="auto"
                 >
-                   {navbarItems.map((item, i) => (
-                  i<3
-                  ?<Link to={`/${item}`}>
-                    <div
-                      className={`capitalize text-center my-5 text-xl ${
-                        pathname.includes(item)
-                          ? " text-primary font-semibold"
-                          : "text-gray"
-                      }`}
-                    >
-                      {item}{" "}
-                    </div>
-                  </Link>
-                  :<a href="https://tutor.edufeat.com/login">
-                  <div
-                    className={`capitalize text-center my-5 text-xl ${
-                      pathname.includes(item)
-                        ? " text-primary font-semibold"
-                        : "text-gray"
-                    }`}
-                  >
-                    {item}{" "}
-                  </div>
-                </a>
-                ))}
+                  {navbarItems.map((item, i) =>
+                    i < 3 ? (
+                      <Link to={`/${item}`}>
+                        <div
+                          className={`capitalize text-center my-5 text-xl ${
+                            pathname.includes(item)
+                              ? " text-primary font-semibold"
+                              : "text-gray"
+                          }`}
+                        >
+                          {item}{" "}
+                        </div>
+                      </Link>
+                    ) : (
+                      <a href="https://tutor.edufeat.com/login">
+                        <div
+                          className={`capitalize text-center my-5 text-xl ${
+                            pathname.includes(item)
+                              ? " text-primary font-semibold"
+                              : "text-gray"
+                          }`}
+                        >
+                          {item}{" "}
+                        </div>
+                      </a>
+                    )
+                  )}
                   <div className="text-base font-semibold">
                     <Link to="/tutor">
                       <Button className=" bg-primary font-semibold  m-auto block">
@@ -133,7 +136,7 @@ export default function Header() {
               </div>
               <div className="md:hidden ">
                 <Group position="center">
-                  <img src={hamburger} alt="" onClick={() => setOpened(true)} />
+                  <img src={hamburger} alt="" onClick={() => setOpen(true)} />
                 </Group>
               </div>
             </div>

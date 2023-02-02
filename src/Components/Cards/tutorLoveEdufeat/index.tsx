@@ -18,7 +18,7 @@ export default function tutorLoveEdufeatCard(props: personProps) {
           src={img}
           alt={`${name} profile pic`}
           // style={{left:"0"}}
-          className="  h-[250px]   "
+          className="  h-[120px] w-[120px] block  "
         />
       </div>
       <div className="pb-[106px]">
