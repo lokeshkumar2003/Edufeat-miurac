@@ -1,13 +1,13 @@
 import react, { useEffect, useRef, useState } from "react";
-import person1 from "../../Assets/tutor1.svg";
-import person2 from "../../Assets/tutor2.svg";
-import person3 from "../../Assets/tutor3.svg";
-import person4 from "../../Assets/tutor4.svg";
-import person5 from "../../Assets/tutor5.svg";
-import person6 from "../../Assets/tutor6.svg";
-import person7 from "../../Assets/tutor7.svg";
-import person8 from "../../Assets/tutor8.svg";
-import person9 from "../../Assets/tutor9.svg";
+import person1 from "../../Assets/tutorfemale1.png";
+import person2 from "../../Assets/tutormale2.png";
+import person3 from "../../Assets/tutormale3.png";
+import person4 from "../../Assets/tutor4male.png";
+import person5 from "../../Assets/tutormale5.png";
+import person6 from "../../Assets/tutormale6.png";
+import person7 from "../../Assets/tutorfemale7.png";
+import person8 from "../../Assets/tutorfemale8.png";
+import person9 from "../../Assets/tutormale9.png";
 import Autoplay from "embla-carousel-autoplay";
 import { useMediaQuery } from '@mantine/hooks';
 import personf1 from "../../Assets/tutorf1.jpg";
@@ -18,7 +18,7 @@ import TutorLoveEdufeatCard from "../../Components/Cards/tutorLoveEdufeat";
 import Content from "../../Components/Layouts/Content";
 export default function TutorLoveEdufeat() {
   // const autoplay = useRef(Autoplay({ delay: 5000 }));
-  const mobile = useMediaQuery('(max-width: 900px)');
+  const mobile = useMediaQuery('(max-width: 600px)');
   const tab = useMediaQuery('(max-width: 1200px)');
   const pcDesktop = useMediaQuery('(min-width: 1199px)');
   const [step, setStep] = useState(2)
@@ -113,7 +113,7 @@ console.log(Math.ceil(cards.length/step));
             // align="start"
             showArrows={false}
             showThumbs={false}
-            autoPlay
+            // autoPlay
             showIndicators={true}
             // selectedItem={active}
             showStatus={false}

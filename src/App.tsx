@@ -1,5 +1,5 @@
-import React from 'react'
-import { Route, Routes } from 'react-router-dom'
+import React, { useEffect } from 'react'
+import { Route, Routes, useLocation } from 'react-router-dom'
 
 import './App.css'
 
@@ -12,7 +12,22 @@ import Tutor from './Pages/Tutor'
 import Terms from './Pages/Terms and Conditions'
 import Privacy from './Pages/Privacy policy'
 import Refund from './Pages/Refund Policy'
+import Contact from './Pages/Contact'
 function App() {
+
+  const location=useLocation()
+
+  useEffect(() => {
+    return () => {
+      window.scrollTo({
+        behavior:"smooth",
+        top:0,
+        left:0,
+      })
+    }
+  }, [location])
+  
+
   return (
     <div >
       <Header />
@@ -24,6 +39,8 @@ function App() {
         <Route path='/terms' element={<Terms />} />
         <Route path='/privacy' element={<Privacy />} />
         <Route path='/refund' element={<Refund />} />
+        <Route path='/contact' element={<Contact />} />
+
 
       </Routes>
 

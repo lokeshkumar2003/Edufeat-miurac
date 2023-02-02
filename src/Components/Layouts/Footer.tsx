@@ -97,13 +97,13 @@ export default function Footer() {
           </div>
           <div className="my-4 flex gap-[96px] md:gap-4 items-center md:justify-start justify-center">
             {socialMedias.map((social, i) => (
-              <Link to={{pathname:social.url}} target="_blank">
+              <a href={social.url} target="_blank">
 
               <div className="flex gap-2 items-center text-xl text-white">
                 {social.icon}
                 <div className="text-sm text-white md:inline-block hidden">{social.label} </div>
               </div>
-              </Link>
+              </a>
             ))}
           </div>
           <div className="max-w-3x text-center text-[10px]  grid gap-1 ">

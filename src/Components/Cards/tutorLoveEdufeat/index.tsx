@@ -12,13 +12,13 @@ type personProps = {
 export default function tutorLoveEdufeatCard(props: personProps) {
   const { img, name, description } = props;
   return (
-    <div className="relative ">
+    <div className="relative w-full ">
       <div className="relative">
         <img
           src={img}
           alt={`${name} profile pic`}
-          style={{left:"0"}}
-          className=" absolute w-[120px] h-[120px]  -top-[60px]  "
+          // style={{left:"0"}}
+          className="  h-[250px]   "
         />
       </div>
       <div className="pb-[106px]">

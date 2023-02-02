@@ -150,22 +150,25 @@ export default function ExpertSteps() {
                 onStepClick={setActive}
                 orientation="vertical"
                 size="sm"
-                className="expert"
+                className="expert overflow-hidden"
                 classNames={{
-                  verticalSeparator: "broder-solid border-l-[8px] -ml-1  ",
+                  verticalSeparator: "broder-solid border-l-[8px] -ml-1 h-[119px] -mt-1 ",
+                  step:"relative overflow-visible p-0",
+                  stepWrapper:"absolute top-10 ",
+                  
                 }}
                 styles={{
-                  separator: {
-                    height: 10,
-                    marginLeft:-2,
-                    marginRight:-2,
-                  },
-                  stepIcon: {
-                    backgroundColor: "transparent",
-                  },
-                  step: {
-                    padding: 0,
-                  },
+                  // separator: {
+                  //   height: 10,
+                  //   // marginLeft:-2,
+                  //   // marginRight:-2,
+                  // },
+                  // stepIcon: {
+                  //   backgroundColor: "transparent",
+                  // },
+                  // step: {
+                  //   padding: 0,
+                  // },
                 }}
               >
                 {steps.map((item, i) => {

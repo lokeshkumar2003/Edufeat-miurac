@@ -12,24 +12,12 @@ import verified from "../../Assets/verified.svg";
 import { RichTextEditor } from "@mantine/rte";
 import spiral from "../../Assets/spiral.svg";
 import herosectionpic from "../../Assets/herosectionpic.svg";
+import { Group, Text, useMantineTheme } from "@mantine/core";
+import { IconUpload, IconPhoto, IconX } from "@tabler/icons";
+import { Dropzone, DropzoneProps, IMAGE_MIME_TYPE } from "@mantine/dropzone";
 
-export default function HeroSection() {
-  const handleImageUpload = useCallback(
-    (file: File): Promise<string> =>
-      new Promise((resolve, reject) => {
-        const formData = new FormData();
-        formData.append("image", file);
-
-        fetch("https://api.imgbb.com/1/upload?key=api_key", {
-          method: "POST",
-          body: formData,
-        })
-          .then((response) => response.json())
-          .then((result) => resolve(result.data.url))
-          .catch(() => reject(new Error("Upload failed")));
-      }),
-    []
-  );
+export default function HeroSection(props: Partial<DropzoneProps>) {
+  const theme = useMantineTheme();
 
   const [value, onChange] = useState(
     "<p>Type your question here or add files</p>"
@@ -79,13 +67,15 @@ export default function HeroSection() {
                 <img src={img} className="object-cover  " alt="img  " />
               </div> */}
               <div>
-                <div className="font-semibold text-lg pb-[12px] text-center text-gray " style={{
-                  fontFamily:"Poppins",
-                  
-                }}>
+                <div
+                  className="font-semibold text-lg pb-[12px] text-center text-gray "
+                  style={{
+                    fontFamily: "Poppins",
+                  }}
+                >
                   Got a question? We have the Answer.
                 </div>
-                <div className=" flex ">
+                <div className=" flex relative ">
                   <div className="2xl:hidden md:visible">
                     <img src={herosectionpic} alt="hero" />
                   </div>
@@ -96,24 +86,73 @@ export default function HeroSection() {
                     formats={["bold", "italic", "underline"]}
                     controls={[["bold", "underline"]]}
                     className="w-[323px] h-[327px] md:w-[392px] md:h-[327px] justify-center rounded-2xl overflow-hidden   "
-                    onImageUpload={handleImageUpload}
-                    classNames={{ toolbarControl: "border-none bg-[#4a4a68] text-white hover:bg-[#ffffff22]", toolbar: "bg-[#4a4a68] rounded-t-2xl" }}
-                    // styles={{
-                    //   toolbar: {
-                    //     backgroundColor: "#4A4A68",
-                    //     borderRadius: "16px 16px 0px 0px ",
-                    //     alignItems: "center",
-                    //     height: "45px",
-                    //     position:"sticky",
-                    //   },
-                    //   toolbarControl:{
-                        
-                    //   }
-                    // }}
-                  />
+                    classNames={{
+                      toolbarControl:
+                        "border-none bg-[#4a4a68] text-white hover:bg-[#ffffff22]",
+                      toolbar: "bg-[#4a4a68] rounded-t-2xl",
+                    }}
+                   />
+                   <div className="absolute bottom-0 ">
+                   <Dropzone
+                    className=" w-fit h-[90px] bottom-3  "
+                      onDrop={(files) => console.log("accepted files", files)}
+                      onReject={(files) => console.log("rejected files", files)}
+                      maxSize={3 * 1024 ** 2}
+                      accept={IMAGE_MIME_TYPE}
+                      {...props}
+                    >
+                      <Group
+                        position="center"
+                        spacing="xl"
+                        style={{ minHeight: 220, pointerEvents: "none" }}
+                      >
+                        <Dropzone.Accept>
+                          <IconUpload
+                            size={50}
+                            stroke={1.5}
+                            color={
+                              theme.colors[theme.primaryColor][
+                                theme.colorScheme === "dark" ? 4 : 6
+                              ]
+                            }
+                          />
+                        </Dropzone.Accept>
+                        <Dropzone.Reject>
+                          <IconX
+                            size={50}
+                            stroke={1.5}
+                            color={
+                              theme.colors.red[
+                                theme.colorScheme === "dark" ? 4 : 6
+                              ]
+                            }
+                          />
+                        </Dropzone.Reject>
+                        {/* <Dropzone.Idle>
+                          <IconPhoto size={50} stroke={1.5} />
+                        </Dropzone.Idle> */}
+
+                        {/* <div>
+                          <Text size="xl" inline>
+                            Drag images here or click to select files
+                          </Text>
+                          <Text size="sm" color="dimmed" inline mt={7}>
+                            Attach as many files as you like, each file should
+                            not exceed 5mb
+                          </Text>
+                        </div> */}
+                      </Group>
+                    </Dropzone>
+                   </div>
+                    
+                 
                 </div>
                 <div className="pt-[15px] w-full h-full flex justify-center gap-[40px] ">
-                  <img src={spiral} alt="spiral" className="2xl:hidden md:visible" />
+                  <img
+                    src={spiral}
+                    alt="spiral"
+                    className="2xl:hidden md:visible"
+                  />
                   <a href="https://tutor.edufeat.com" target="_blank">
                     <Button className="bg-primary">Get Solution</Button>
                   </a>

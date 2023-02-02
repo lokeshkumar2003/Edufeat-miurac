@@ -11,22 +11,19 @@ import { Drawer, Group } from "@mantine/core";
 
 const navbarItems = ["about", "subject", "contact", "login"];
 export default function Header() {
-  const [isHidden, setIsHidden] = useState(false);
-
+  const [hide, setHide] = useState(false);
+  let lastPosition = 0;
   useEffect(() => {
-    window.onscroll = () => {
-      if (window.pageYOffset > 0) {
-        
-        setIsHidden(true);
-      } else {
-        setIsHidden(false);
+    window.onscroll = function() {
+      const currentPosition = window.pageYOffset;
+      if (currentPosition === 0) {
+        setHide(false);
+      }  else {
+        setHide(true);
       }
-    };
-    return () => {
-      window.onscroll = null;
+      lastPosition = currentPosition;
     };
   }, []);
-
 
   const [opened, setOpened] = useState(false);
   const [nav, setNav] = useState(false);
@@ -38,13 +35,13 @@ export default function Header() {
   const { pathname } = useLocation();
   return (
     <div className="sticky top-0 z-50">
-      <div>
-      {!isHidden && (
-        <div>
+      
+      <div style={{display: hide ? 'none' : 'block'}}>
+
           {pathname !== "/tutor" && <TopHeader />}
-        </div>
-      )}
       </div>
+        
+      
       <div className=" bg-white shadow-headerShadow py-3 md:py-2   ">
         <Content>
           <div className="flex items-center ">
