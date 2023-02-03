@@ -15,6 +15,7 @@ import herosectionpic from "../../Assets/herosectionpic.svg";
 import { Group, Text, useMantineTheme } from "@mantine/core";
 import { IconUpload, IconPhoto, IconX } from "@tabler/icons";
 import { Dropzone, DropzoneProps, IMAGE_MIME_TYPE } from "@mantine/dropzone";
+import file from "../../Assets/file.svg"
 
 export default function HeroSection(props: Partial<DropzoneProps>) {
   const theme = useMantineTheme();
@@ -93,9 +94,9 @@ export default function HeroSection(props: Partial<DropzoneProps>) {
                         toolbar: "bg-[#4a4a68] rounded-t-2xl",
                       }}
                     />
-                    <div className=" bg-white max-w-[392px] border-gray-light h-[120px] bottom-3 border-t-0 border-solid border-[1px] rounded-t-none rounded-b-2xl ">
+                    <div className=" bg-white  max-w-[392px] border-gray-light h-[120px] bottom-3 border-t-0 border-solid border-[1px] rounded-t-none rounded-b-2xl ">
                       <Dropzone
-                        className=" max-w-[365px] h-[90px]   rounded-2xl mx-[13px]  "
+                        className=" max-w-[365px] min-w-[327px] h-[90px]   rounded-2xl mx-[13px]  "
                         onDrop={(files) => console.log("accepted files", files)}
                         onReject={(files) =>
                           console.log("rejected files", files)
@@ -135,7 +136,7 @@ export default function HeroSection(props: Partial<DropzoneProps>) {
 
                           <Dropzone.Idle >
                             <div className="flex flex-col items-center gap-2">
-                              <IconPhoto size={32} stroke={1.5} />
+                              <img src={file} alt="file" className="w-[32px] h-[32px]"  />
                               <Text className="text-base md:text-lg lg:text-xl" inline>
                               Drop your file or browse from folder
                             </Text>
