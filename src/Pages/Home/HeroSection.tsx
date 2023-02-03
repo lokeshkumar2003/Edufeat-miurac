@@ -164,7 +164,7 @@ export default function HeroSection(props: Partial<DropzoneProps>) {
       </Content>
       <div className="border-[1px] border-solid  border-white">
         <Content>
-          <div className=" grid sm:grid-cols-2 md:grid-cols-4 gap-3 md:gap-[185px] py-8 justify-center">
+          <div className=" grid grid-cols-2 md:grid-cols-4 gap-3 md:gap-[185px] py-3 justify-center">
             {data.map((item, i) => (
               <div className="flex gap-4 ">
                 <img className="w-[50px] h-[50px] " src={item.img} alt="" />
