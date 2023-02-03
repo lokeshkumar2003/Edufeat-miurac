@@ -31,36 +31,36 @@ export default function TutorLoveEdufeat() {
   const cards = [
     {
       img: person1,
-      name: "Apurva Talashilkar , Somaiya Vidyavihar University",
+      name: "Sonal Garg,Krishna Institute of Engg College",
       description:
         "Overall experience was really good. It is best in terms of a part time job. Also one has totally flexibility on choosing the assignment to work on and if break from the worm required. You can continue the work when you are able to. ",
     },
 
     {
       img: person2,
-      name: "Shubadip, VIT Chennai",
+      name: "Saumitra Pandey,BITS Pilani",
       description:
         "In my one year with EduFeat, i have become a better engineer. The vast array of problems from various subjects helped me better my concepts and deepening my understanding. Working as a SME for EduFeat was my 1st  and i will always cherish the experience. I wish all the luck for EduFeat . May you achieve all your aspirations. ",
     },
 
     {
       img: person3,
-      name: "Amit Prajapati, IIT Roorkee",
+      name: "Mridul Gupta, NIT Jalandhar",
       description:
         "Cleared the BARC entrance and GATE exam (AIR250) without any coaching. After that, I cleared the BARC Scientific Officer interview and got selected. Currently working as Scientific Officer.",
     },
     {
       img: person4,
-      name: "Nitish, NIT Silchar",
+      name: "Shagun Agarwal , NIT Jalandhar",
       description:
         "The day I got into the platform my life kind of changed and  I became economically independent. The learning which I got was very helpful in my academics and competitive exams. Will surely recommend to my juniors to work on this platform for great learning and earning.",
     },
 
     {
       img: person5,
-      name: "Abhishek , NIT Kurukshetra",
+      name: "Abhinav Tiwari , BITS Pilani",
       description:
-        "EduFeat has made me a responsible person. I don't know how, but it has. I can manage my time easily now. Whenever there is a session at night, I manage my work in daytime so that i'm available for the session. Edufeat also taught me efficiency. I try to solve less problems but correctly thereby increasing my efficiency. Also it's a bit of a good practice to be in touch with JEE topics as they help me a lot today.",
+        "EduFeat has made me a responsible person. I don't know how, but it has. I can manage my time easily now. Whenever there is a session at night, I manage my work in daytime so that i'm available for the session. Edufeat also taught me efficiency. I try to solve less problems but correctly thereby increasing my efficiency. ",
     },
 
     {
@@ -71,21 +71,21 @@ export default function TutorLoveEdufeat() {
     },
     {
       img: person7,
-      name: "Prasanna, Manipal University",
+      name: "Kiran Pabreja, Banaras University",
       description:
         "I have earned money for the first time.I faced different questions, most of which were really interesting, and I learned a lot during my time here.",
     },
 
     {
       img: person8,
-      name: "Biswajit Sharma, IIT BHU",
+      name: "Pratyasha Bhardwaj, IIT Delhi",
       description:
         "It provided me with the application platform for my knowledge. It also helped me to add up some new concept in my knowledge bag every moment.",
     },
 
     {
       img: person9,
-      name: "Sumeet , Banaras Hindu University",
+      name: "Suyash Agrawal , NIT Warangal",
       description:
         "I didn't have to ask for money from my parents so it made me independent. And I got an insight in teaching as I myself provided solutions for questions so being on this side was very nice.",
     },
@@ -113,7 +113,7 @@ console.log(Math.ceil(cards.length/step));
             // align="start"
             showArrows={false}
             showThumbs={false}
-            // autoPlay
+            autoPlay
             showIndicators={true}
             // selectedItem={active}
             showStatus={false}

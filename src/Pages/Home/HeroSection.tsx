@@ -79,23 +79,23 @@ export default function HeroSection(props: Partial<DropzoneProps>) {
                   <div className="2xl:hidden md:visible">
                     <img src={herosectionpic} alt="hero" />
                   </div>
-                  <div className="">
+                  <div className=" ">
                     <RichTextEditor
                       id="rte"
                       value={value}
                       onChange={onChange}
                       formats={["bold", "italic", "underline"]}
                       controls={[["bold", "underline"]]}
-                      className="w-[392px] h-[213px] justify-center rounded-t-2xl rounded-b-none overflow-hidden  border-b-0 "
+                      className="max-w-[392px] h-[213px] justify-center rounded-t-2xl rounded-b-none overflow-hidden  border-b-0 "
                       classNames={{
                         toolbarControl:
                           "border-none bg-[#4a4a68] text-white hover:bg-[#ffffff22]",
                         toolbar: "bg-[#4a4a68] rounded-t-2xl",
                       }}
                     />
-                    <div className=" bg-white w-[392px] border-gray-light h-[100px] bottom-3 border-t-0 border-solid border-[1px] rounded-t-none rounded-b-2xl ">
+                    <div className=" bg-white max-w-[392px] border-gray-light h-[100px] bottom-3 border-t-0 border-solid border-[1px] rounded-t-none rounded-b-2xl ">
                       <Dropzone
-                        className=" w-[365px] h-[90px]   rounded-2xl mx-[13px]  "
+                        className=" max-w-[365px] h-[90px]   rounded-2xl mx-[13px]  "
                         
                         onDrop={(files) => console.log("accepted files", files)}
                         onReject={(files) =>
@@ -109,6 +109,7 @@ export default function HeroSection(props: Partial<DropzoneProps>) {
                           position="center"
                           spacing="xl"
                           style={{ minHeight: 220, pointerEvents: "none" }}
+                          
                         >
                           <Dropzone.Accept>
                             <IconUpload
@@ -138,7 +139,7 @@ export default function HeroSection(props: Partial<DropzoneProps>) {
                             <IconPhoto size={32} stroke={1.5}  />
                           </Dropzone.Idle>
                           
-                          <div>
+                          <div className="">
                             <Text size="xl" inline>
                               Drop your file or browse from folder
                             </Text>
