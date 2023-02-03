@@ -26,7 +26,7 @@ export default function HeroSection(props: Partial<DropzoneProps>) {
     <div className="bg-lightSkyBlue">
       <Content>
         <>
-          <div className="items-center ">
+          <div className="items-center pb-5">
             <div className="grid md:grid-cols-2 py-11 justify-between items-center md:gap-[157px]">
               <div className="">
                 <div className="flex items-center gap-[5px] flex-row ">
@@ -93,10 +93,9 @@ export default function HeroSection(props: Partial<DropzoneProps>) {
                         toolbar: "bg-[#4a4a68] rounded-t-2xl",
                       }}
                     />
-                    <div className=" bg-white max-w-[392px] border-gray-light h-[100px] bottom-3 border-t-0 border-solid border-[1px] rounded-t-none rounded-b-2xl ">
+                    <div className=" bg-white max-w-[392px] border-gray-light h-[120px] bottom-3 border-t-0 border-solid border-[1px] rounded-t-none rounded-b-2xl ">
                       <Dropzone
                         className=" max-w-[365px] h-[90px]   rounded-2xl mx-[13px]  "
-                        
                         onDrop={(files) => console.log("accepted files", files)}
                         onReject={(files) =>
                           console.log("rejected files", files)
@@ -108,8 +107,7 @@ export default function HeroSection(props: Partial<DropzoneProps>) {
                         <Group
                           position="center"
                           spacing="xl"
-                          style={{ minHeight: 220, pointerEvents: "none" }}
-                          
+                          style={{ pointerEvents: "none" }}
                         >
                           <Dropzone.Accept>
                             <IconUpload
@@ -136,14 +134,13 @@ export default function HeroSection(props: Partial<DropzoneProps>) {
                           
 
                           <Dropzone.Idle >
-                            <IconPhoto size={32} stroke={1.5}  />
-                          </Dropzone.Idle>
-                          
-                          <div className="">
-                            <Text size="xl" inline>
+                            <div className="flex flex-col items-center gap-2">
+                              <IconPhoto size={32} stroke={1.5} />
+                              <Text className="text-base md:text-lg lg:text-xl" inline>
                               Drop your file or browse from folder
                             </Text>
                           </div>
+                          </Dropzone.Idle>
                         </Group>
                       </Dropzone>
                     </div>
@@ -166,7 +163,7 @@ export default function HeroSection(props: Partial<DropzoneProps>) {
       </Content>
       <div className="border-[1px] border-solid  border-white">
         <Content>
-          <div className=" grid grid-cols-2 md:grid-cols-4 gap-3 md:gap-[185px] py-3">
+          <div className=" grid sm:grid-cols-2 md:grid-cols-4 gap-3 md:gap-[185px] py-8 justify-center">
             {data.map((item, i) => (
               <div className="flex gap-4 ">
                 <img className="w-[50px] h-[50px] " src={item.img} alt="" />
