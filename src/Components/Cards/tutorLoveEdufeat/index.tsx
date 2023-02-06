@@ -6,14 +6,18 @@ import "./styles.css";
 type personProps = {
   img: string;
   name: string;
+  college: string;
   description: string;
 };
 
 export default function tutorLoveEdufeatCard(props: personProps) {
-  const { img, name, description } = props;
+  const { img, name, college, description } = props;
   return (
     <div className="relative w-full  ">
-      <div style={{left:"calc(50% - 60px)"}} className="absolute h-[120px] w-[120px]  -top-16">
+      <div
+        style={{ left: "calc(50% - 60px)" }}
+        className="absolute h-[120px] w-[120px]  -top-16"
+      >
         <img
           src={img}
           alt={`${name} profile pic`}
@@ -24,8 +28,12 @@ export default function tutorLoveEdufeatCard(props: personProps) {
       <div className="pb-[106px] ">
         {/* <Content> */}
         <div className="max-w-[400px] h-[515px] bg-white rounded-[30px] mx-auto ">
-          <div className="font-sans font-semibold text-[22px] text-primary text-center pt-[94px]">
-            {name}
+          <div className="">
+            <div className="font-sans px-[50px] text-primary  pt-[94px] ">
+              <span className="font-semibold text-[22px]">{name}</span>
+              <span className="text-primary ">,</span>
+              <span className="text-[16px]">{college}</span>
+            </div>
           </div>
           <div className="relative ">
             <div

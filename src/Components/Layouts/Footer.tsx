@@ -83,6 +83,8 @@ export default function Footer() {
                     </div>
                   </div>
                   <div className="flex justify-center md:justify-start pt-8 md:pt-0 ">
+                    <a href="https://edufeat--website.web.app/" target="_blank">
+
                     <Button
                       color="#29329c"
                       className="text-white bg-primary"
@@ -90,6 +92,7 @@ export default function Footer() {
                     >
                       Become a Tutor
                     </Button>
+                    </a>
                   </div>
                 </div>
               </div>

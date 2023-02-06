@@ -37,7 +37,7 @@ export default function HomeworkSteps() {
           </p>
           <div className='grid  mx-auto md:grid-cols-4 gap-6 place-items-center '>
             {HomeworkStepsData.map((step, i) => (
-              <div className='bg-white  px-8 pt-6 pb-12 rounded-xl w-96 md:w-auto md:h-72 '>
+              <div className='bg-white  px-8 pt-6 pb-10 rounded-xl w-96 md:w-auto md:h-56 '>
                 <div className='text-hint font-medium text-lg'>
                   Step {i + 1}
                 </div>
@@ -49,7 +49,10 @@ export default function HomeworkSteps() {
             ))}
           </div>
           <div className=" mt-12 flex justify-center items-center ">
+            <a href="https://edufeat--website.web.app/" target="_blank" >
+
             <Button className="bg-primary font-semibold text-base">Get Service Now</Button>
+            </a>
           </div>
         </div>
       </Content>

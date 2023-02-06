@@ -80,7 +80,7 @@ export default function Header() {
                   )
                 )}
                 <div className="text-base font-semibold">
-                  <a href="https://tutor.edufeat.com/">
+                  <a href="https://edufeat--website.web.app/">
                     <Button className=" bg-primary font-semibold" size="md">
                       Account
                     </Button>
@@ -97,6 +97,7 @@ export default function Header() {
                   position="top"
                   padding="xs"
                   size="auto"
+                  
                 >
                   {navbarItems.map((item, i) =>
                     i < 3 ? (

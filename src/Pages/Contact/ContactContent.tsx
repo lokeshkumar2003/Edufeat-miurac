@@ -25,15 +25,20 @@ const socialMedias = [
   ];
 export default function ContactContent() {
   return (
-    <div className="bg-lightSkyBlue w-full h-full ">
-      <div className="py-20">
-        <Content>
-          <div className="justify-center w-[300px]  bg-white py-5 rounded-2xl pl-5">
+    <div className="">
+      <div className="bg-lightSkyBlue w-full h-full  ">
+      <div className="py-20 flex justify-center items-center">
+        {/* <Content> */}
+          <div className="justify-center w-[300px]  bg-white py-5 rounded-2xl pl-5 md:px-5">
             <div className="justify-center  py-10 ">
               <div className="flex gap-1  text-primary flex-row ">
                 <AiOutlineMail size={20} />
                 Email: support@edufeat.com
               </div>
+              <div className="">
+                      <div className="text-primary pt-3">Drop your CV: tutorhr@edufeat.com </div>
+                      
+                    </div>
               <div className="flex gap-2 text-primary mt-3 ">
                 <IoCallOutline size={20} />
                 Phone: +91-8240014127
@@ -51,8 +56,10 @@ export default function ContactContent() {
               </div>
             </div>
           </div>
-        </Content>
+        {/* </Content> */}
       </div>
     </div>
+    </div>
+    
   );
 }

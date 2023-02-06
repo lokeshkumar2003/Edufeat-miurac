@@ -23,6 +23,10 @@ export default function HeroSection(props: Partial<DropzoneProps>) {
   const [value, onChange] = useState(
     "<p>Type your question here or add files</p>"
   );
+
+  const handleChange=()=>{
+      onChange("")
+  }
   return (
     <div className="bg-lightSkyBlue">
       <Content>
@@ -37,27 +41,30 @@ export default function HeroSection(props: Partial<DropzoneProps>) {
                   <img src={heart} alt="heart" />
                 </div>
                 <div className="max-w-xl grid gap-4">
-                  <div className="text-primary font-semibold text-6xl  leading-relaxed ">
+                  <div className="text-primary font-semibold text-[32px] leading-normal md:text-6xl 2xl:pr-[38px] md:leading-relaxed ">
                     Best Academic helps with great prices!
                   </div>
-                  <p className="py-4">
+                  <p className="py-4 text-[14px] md:text-[16px]">
                     Our tutors are here to help you in every step of your
                     course!
                   </p>
 
                   <div className="flex flex-col gap-3 md:items-center md:flex-row ">
                     <div className="">
-                      <Link to="/tutor">
-                        <Button
+                      {/* <Link to="/tutor"> */}
+                      <a href="https://edufeat--website.web.app/" target="_blank">
+                      <Button
                           color="#29329c"
                           className="text-white bg-primary"
                           size="md"
                         >
                           Get Started
                         </Button>
-                      </Link>
+                      </a>
+                        
+                      {/* </Link> */}
                     </div>
-                    <div className="flex items-start gap-[5px]">
+                    <div className="flex items-start gap-[5px] 2xl:pt-[18px]">
                       <img src={verified} alt="verified" />
                       <div className="text-sm">100% verified answers</div>
                     </div>
@@ -83,8 +90,9 @@ export default function HeroSection(props: Partial<DropzoneProps>) {
                   <div className=" ">
                     <RichTextEditor
                       id="rte"
-                      value={value}
-                      onChange={onChange}
+                      // value={value}
+                      placeholder="Type your question here or add files"
+                      // onChange={handleChange}
                       formats={["bold", "italic", "underline"]}
                       controls={[["bold", "underline"]]}
                       className="max-w-[392px] h-[213px] justify-center rounded-t-2xl rounded-b-none overflow-hidden  border-b-0 "
@@ -137,7 +145,7 @@ export default function HeroSection(props: Partial<DropzoneProps>) {
                           <Dropzone.Idle >
                             <div className="flex flex-col items-center gap-2">
                               <img src={file} alt="file" className="w-[32px] h-[32px]"  />
-                              <Text className="text-base md:text-lg lg:text-xl" inline>
+                              <Text className=" md:text-xs text-xl text-gray" inline>
                               Drop your file or browse from folder
                             </Text>
                           </div>
@@ -151,9 +159,9 @@ export default function HeroSection(props: Partial<DropzoneProps>) {
                   <img
                     src={spiral}
                     alt="spiral"
-                    className="2xl:hidden md:visible"
+                    className="2xl:hidden md:visible w-[185px] h-[56px]"
                   />
-                  <a href="https://tutor.edufeat.com" target="_blank">
+                  <a href="https://edufeat--website.web.app/" target="_blank">
                     <Button className="bg-primary">Get Solution</Button>
                   </a>
                 </div>

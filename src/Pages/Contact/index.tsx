@@ -3,7 +3,7 @@ import ContactContent from "./ContactContent";
 
 export default function Contact(){
     return(
-        <div>
+        <div >
             <ContactContent />
         </div>
     )
