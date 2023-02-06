@@ -83,7 +83,7 @@ export default function Footer() {
                     </div>
                   </div>
                   <div className="flex justify-center md:justify-start pt-8 md:pt-0 ">
-                    <a href="https://edufeat--website.web.app/" target="_blank">
+                    <a href="https://tutor.edufeat.com/" target="_blank">
 
                     <Button
                       color="#29329c"
