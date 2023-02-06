@@ -87,7 +87,7 @@ export default function HeroSection(props: Partial<DropzoneProps>) {
                   <div className="2xl:hidden md:visible">
                     <img src={herosectionpic} alt="hero" />
                   </div>
-                  <div className=" ">
+                  <div className="max-w-[365px] md:w-4/5 mx-auto md:mx-0 flex-wrap ">
                     <RichTextEditor
                       id="rte"
                       // value={value}
@@ -104,7 +104,7 @@ export default function HeroSection(props: Partial<DropzoneProps>) {
                     />
                     <div className=" bg-white  max-w-[392px] border-gray-light h-[120px] bottom-3 border-t-0 border-solid border-[1px] rounded-t-none rounded-b-2xl ">
                       <Dropzone
-                        className=" max-w-[365px] min-w-[327px] h-[90px]   rounded-2xl mx-[13px]  "
+                        className="   h-[90px]   rounded-2xl mx-[13px]  "
                         onDrop={(files) => console.log("accepted files", files)}
                         onReject={(files) =>
                           console.log("rejected files", files)

@@ -48,7 +48,7 @@ export default function tutorLoveEdufeatCard(props: personProps) {
             >
               ,
             </div>
-            <div className="absolute font-sans font-normal px-[40px] text-justify pt-[89.5px] text-[16px] z-10">
+            <div className="absolute font-sans font-normal px-[40px] text-justify pt-[89.5px]  text-[16px] z-10">
               {description}
             </div>
           </div>

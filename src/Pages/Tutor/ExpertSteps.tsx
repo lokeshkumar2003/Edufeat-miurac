@@ -187,9 +187,12 @@ export default function ExpertSteps() {
             </div>
           </div>
           <div className="my-8 flex justify-center">
+            <a href="https://tutor.edufeat.com/" target="_blank">
+
             <Button color="#29329c" className="text-white bg-primary" size="md">
               Become a Tutor
             </Button>
+            </a>
           </div>
         </div>
       {/* </Container> */}

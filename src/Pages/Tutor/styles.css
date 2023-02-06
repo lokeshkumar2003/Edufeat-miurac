@@ -85,4 +85,11 @@
     width: 75vw;
     min-height: auto;
   }
+  .subjectCard{
+    width: 70vw;
+  }
+  .tutorLoveEdufeatCard{
+    width: 70vw;
+    
+  }
 }

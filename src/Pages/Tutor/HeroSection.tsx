@@ -41,6 +41,8 @@ export default function HeroSection() {
               </p>
               <div className="flex flex-col gap-3 md:items-center md:flex-row ">
                 <div className="text-white">
+                  <a href="https://tutor.edufeat.com/" target="_blank">
+
                   <Button
                     color="#29329c"
                     className="text-white bg-primary"
@@ -48,6 +50,7 @@ export default function HeroSection() {
                   >
                     Become a Tutor
                   </Button>
+                  </a>
                 </div>
                 <div className="text-sm">
                   Top Experts earn upto ₹50,000 per month.

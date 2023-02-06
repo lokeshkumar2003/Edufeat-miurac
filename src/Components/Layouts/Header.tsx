@@ -101,7 +101,7 @@ export default function Header() {
                 >
                   {navbarItems.map((item, i) =>
                     i < 3 ? (
-                      <Link to={`/${item}`}>
+                      <Link to={`/${item}`} onClick={()=>setOpen(false)}>
                         <div
                           className={`capitalize text-center my-5 text-xl ${
                             pathname.includes(item)
