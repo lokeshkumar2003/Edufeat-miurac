@@ -41,7 +41,7 @@ export default function Footer() {
                 <img src={logo} alt="logo"  className="w-[259px] h-[81px]"/>
               </div>
               <div className="w-64 pt-[15px]  mx-auto md:mx-0 text-white">
-                Office 901, 9th Floor, Ergo Tower, Sector V, Salt lake 700091
+                Sector V, Salt lake, Kolkata 700091
               </div>
             </div>
 

@@ -40,8 +40,6 @@ function App() {
         <Route path='/privacy' element={<Privacy />} />
         <Route path='/refund' element={<Refund />} />
         <Route path='/contact' element={<Contact />} />
-
-
       </Routes>
 
       <Footer />

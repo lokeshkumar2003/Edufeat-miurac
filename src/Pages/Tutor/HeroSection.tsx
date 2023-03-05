@@ -2,7 +2,7 @@ import React, { useState, useRef } from "react";
 import Content from "../../Components/Layouts/Content";
 import heroSectionimg from "../../Assets/herosection.svg";
 import { Button } from "@mantine/core";
-import heroSectionImg2 from "../../Assets/herosSectionImg2.svg";
+import heroSectionImg2 from "../../Assets/herosSectionImg3.svg";
 import { Carousel } from "@mantine/carousel";
 import { createStyles } from "@mantine/core";
 import Autoplay from "embla-carousel-autoplay";
