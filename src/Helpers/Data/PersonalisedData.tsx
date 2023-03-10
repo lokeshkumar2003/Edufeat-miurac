@@ -49,7 +49,7 @@ export const personalisedData = [
   },
   {
     img: paperSheet,
-    title: 'Essays Help',
+    title: 'Essay Help',
     description:
       'Write the best Essay in your class with the help of Edufeat’s Essay Writing help!',
     color: 'linear-gradient(#A292FF, #B9ACFF)',

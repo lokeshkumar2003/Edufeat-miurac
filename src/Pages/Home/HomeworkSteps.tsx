@@ -30,10 +30,10 @@ export default function HomeworkSteps() {
       <Content>
         <div className=''>
           <div className='text-primary heading text-center mb-8'>
-            Complete your Homework in 4 easy steps
+            Get our help in 4 easy steps!
           </div>
           <p className='py-4 text-center text-base mb-10'>
-            Get homework done fast with 100% accuracy with 24/7 expert help.
+            Get the best expert's help available 24/7 with 100% accuracy !
           </p>
           <div className='grid  mx-auto md:grid-cols-4 gap-6 place-items-center '>
             {HomeworkStepsData.map((step, i) => (

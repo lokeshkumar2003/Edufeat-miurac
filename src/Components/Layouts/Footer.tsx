@@ -1,5 +1,5 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import logo from "../../Assets/whitelogo.svg";
 import { AiOutlineMail } from "react-icons/ai";
 import { IoCallOutline } from "react-icons/io5";
@@ -10,7 +10,7 @@ import Content from "./Content";
 import { Button } from "@mantine/core";
 const footerItems = [
   ["about", "contact", "terms & conditions"],
-  ["privacy policy", "refund policy"],
+  ["privacy policy", "refund policy","subject"],
 ];
 
 const socialMedias = [
@@ -31,6 +31,7 @@ const socialMedias = [
   },
 ];
 export default function Footer() {
+  const { pathname } = useLocation();
   return (
     <div className="  bg-darkblue  py-3 text-sm">
       <Content>
@@ -50,7 +51,14 @@ export default function Footer() {
                 {footerItems.map((arr, i) => (
                   <div className="w-full pt-8 md:pt-0">
                     <div className="ul list-none grid gap-[26px]">
-                      {arr.map((item, i) => (
+                      {arr.filter(item=>{
+                        if(pathname==='/tutor'){
+                          return item!== 'refund policy'
+                        }
+                        else{
+                          return item 
+                        }
+                      }).map((item, i) => (
                         <Link
                           to={`/${item.split(" ")[0]}`}
                           className="text-center md:text-left"
@@ -64,24 +72,24 @@ export default function Footer() {
                     </div>
                   </div>
                 ))}
-
+                
                 <div className="grid gap-4 w-full ">
                   <div className="grid gap-4 order-last md:order-first w-64 md:w-full mx-auto  text-base">
                     <div className="flex gap-1  text-white flex-row ">
                       <AiOutlineMail size={20} />
                       Email:support@edufeat.com
                     </div>
+                    
                     <div className="">
                       <div className="text-white">Drop your CV: </div>
                       <div className="text-white">tutorhr@edufeat.com</div>
                     </div>
                     <div className="flex gap-2 text-white ">
-                      
                         <IoCallOutline size={20} />
-                      
                       Phone: +91-8240014127
                     </div>
                   </div>
+                  
                   <div className="flex justify-center md:justify-start pt-8 md:pt-0 ">
                     <a href="https://tutor.edufeat.com/" target="_blank">
 
