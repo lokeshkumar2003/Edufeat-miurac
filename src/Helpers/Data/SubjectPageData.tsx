@@ -6,7 +6,7 @@ import math from "../../Assets/subjectMath.svg";
 import cheEng from "../../Assets/subjectChemicalEng.svg";
 import other from "../../Assets/subjectOther.svg";
 import civil from "../../Assets/civil.svg";
-import statistics from "../../Assets/statistics.svg"
+import statistics from "../../Assets/statistics.svg";
 import economics from "../../Assets/economics.svg";
 export const SubjectPageData = [
   {
@@ -44,22 +44,21 @@ export const SubjectPageData = [
     // ),
   },
   {
-    img:civil,
-    title:'Civil Engineering',
-    subjectContent:[
-      {name:'Construction Project Management'},
-      {name:'Environmental Engineering'},
-      {name:'Foundation Design'},
-      {name:'Geotechnical Engineering'},
-      {name:'Hydraulic Engineering'},
-      {name:'Mechanics of Materials'},
-      {name:'Reinforced Cement Concrete'},
-      {name:'Structural Analysis'},
-      {name:'Surveying'},
-      {name:'Transportation and Highway Engineering'},
-      {name:'Water Resources Engineering '},
-
-    ]
+    img: civil,
+    title: "Civil Engineering",
+    subjectContent: [
+      { name: "Construction Project Management" },
+      { name: "Environmental Engineering" },
+      { name: "Foundation Design" },
+      { name: "Geotechnical Engineering" },
+      { name: "Hydraulic Engineering" },
+      { name: "Mechanics of Materials" },
+      { name: "Reinforced Cement Concrete" },
+      { name: "Structural Analysis" },
+      { name: "Surveying" },
+      { name: "Transportation and Highway Engineering" },
+      { name: "Water Resources Engineering " },
+    ],
   },
   {
     img: elecEng,
@@ -110,39 +109,7 @@ export const SubjectPageData = [
       { name: "Transport Phenomena" },
     ],
   },
-  {
-    img: other,
-    title: "Other Subject",
-    subjectContent: [
-      { name: "Biology" },
-      { name: "Solidworks" },
-      { name: "Matlab" },
-      { name: "Autocad" },
-      { name: "C" },
-      { name: "C++" },
-      { name: "Lab Report or Projects" },
-      { name: "Essay Writing" },
-    ],
-  },
-  {
-    img:statistics,
-    title:'Statistics and Probability',
-    subjectContent:[
-      {name:'Business Statistics'},
-      {name:'Elementary Statistics'},
-      {name:'Probability'}
-    ]
-  },
-  {
-    img:economics,
-    title:'Economics',
-    subjectContent:[
-      {name:'Finance'},
-      {name:'Economics'},
-      {name:'Accounting'},
-      {name:'Operations Management'}
-    ]
-  },
+
   {
     img: math,
     title: "Mathematics",
@@ -156,6 +123,41 @@ export const SubjectPageData = [
       { name: "Numerical Methods" },
       { name: "Discrete Mathematics" },
       // { name: "Geometry" },
+    ],
+  },
+
+  {
+    img: statistics,
+    title: "Statistics and Probability",
+    subjectContent: [
+      { name: "Business Statistics" },
+      { name: "Elementary Statistics" },
+      { name: "Probability" },
+    ],
+  },
+  {
+    img: economics,
+    title: "Economics",
+    subjectContent: [
+      { name: "Finance" },
+      { name: "Economics" },
+      { name: "Accounting" },
+      { name: "Operations Management" },
+    ],
+  },
+
+  {
+    img: other,
+    title: "Other Subject",
+    subjectContent: [
+      { name: "Biology" },
+      { name: "Solidworks" },
+      { name: "Matlab" },
+      { name: "Autocad" },
+      { name: "C" },
+      { name: "C++" },
+      { name: "Lab Report or Projects" },
+      { name: "Essay Writing" },
     ],
   },
 ];

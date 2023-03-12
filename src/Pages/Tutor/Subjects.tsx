@@ -10,13 +10,27 @@ export default function Subjects() {
       <Content>
         <div className="">
           <div className="heading text-primary text-center py-4">Subjects</div>
-          <div className="flex flex-wrap gap-10 justify-center ">
-           
+          <Accordion>
+            <div className="flex flex-wrap gap-10 justify-center ">
               {subjectsData.map((item, i) => (
-                <SubjectCard key={i} img={item.img} title={item.title} subject={item.subject} />
+                // <SubjectCard
+                //   key={i}
+                //   img={item.img}
+                //   title={item.title}
+                //   subject={item.subject}
+                // />
+                <Accordion.Item value={item.title}>
+                  <Accordion.Control>
+                    <div className="flex items-center gap-4 w-[280px] md:w-[350px]">
+                      <img src={item.img} alt="subimg" />
+                      <div className="">{item.title}</div>
+                    </div>
+                  </Accordion.Control>
+                  <Accordion.Panel>{item.subject}</Accordion.Panel>
+                </Accordion.Item>
               ))}
-            
-          </div>
+            </div>
+          </Accordion>
         </div>
       </Content>
     </div>

@@ -14,23 +14,23 @@ export const subjectsData = [
     title: "Mechanical Engineering ",
     subject: (
       <text>
-        Dynamics
-        <br /> Fluid Mechanics
-        <br /> Heat Transfer
-        <br /> Heating
-        <br /> Ventilation and Air Conditioning(HVAC)
-        <br /> Kinematics of Machinery
-        <br /> Machine Design
-        <br />
-        Manufacturing Processes
-        <br /> Material Science
-        <br /> Mechanics of Materials
-        <br />
-        Statics
-        <br /> Thermodynamics
-        <br /> Vibrations
-        <br /> Gas Dynamics
-        <br /> Finite Element Analysis.
+        <ul>
+          <li>Dynamics</li>
+          <li>Fluid Mechanics</li>
+          <li>Heat Transfer</li>
+          <li>Heating</li>
+          <li>Ventilation and Air Conditioning(HVAC)</li>
+          <li>Kinematics of Machinery</li>
+          <li>Machine Design</li>
+          <li>Manufacturing Processes</li>
+          <li>Material Science</li>
+          <li>Mechanics of Materials</li>
+          <li>Statics</li>
+          <li>Thermodynamics</li>
+          <li>Vibrations</li>
+          <li>Gas Dynamics</li>
+          <li>Finite Element Analysis.</li>
+        </ul>
       </text>
     ),
   },
@@ -39,8 +39,11 @@ export const subjectsData = [
     title: "Physics",
     subject: (
       <text>
-        Physics-I <br /> Physics-II
-        <br /> Modern Physics
+        <ul>
+          <li>Physics-I</li>
+          <li>Physics-II</li>
+          <li>Modern Physics</li>
+        </ul>
       </text>
     ),
   },
@@ -49,18 +52,19 @@ export const subjectsData = [
     title: "Electrical Engineering",
     subject: (
       <text>
-        Analog Electronics
-        <br /> Control Systems
-        <br /> Digital Electronics
-        <br /> Electrical Circuits and Networks
-        <br /> Electrical Machines
-        <br /> Measurements and Instrumentation
-        <br /> Power Electronics
-        <br /> Power Systems
-        <br /> Signals and Systems
-        <br />
-        Communication Engineering
-        <br /> Electromagnetics.
+        <ul>
+          <li>Analog Electronics</li>
+          <li>Control Systems</li>
+          <li>Digital Electronics</li>
+          <li>Electrical Circuits and Networks</li>
+          <li>Electrical Machines</li>
+          <li>Measurements and Instrumentation</li>
+          <li>Power Electronics</li>
+          <li>Power Systems</li>
+          <li>Signals and Systems</li>
+          <li>Communication Engineering</li>
+          <li>Electromagnetics</li>
+        </ul>
       </text>
     ),
   },
@@ -69,9 +73,12 @@ export const subjectsData = [
     title: "Chemistry",
     subject: (
       <text>
-        General Chemistry
-        <br /> Chemistry I<br /> Chemistry II
-        <br /> Organic Chemistry
+        <ul>
+          <li> General Chemistry</li>
+          <li>Chemistry I</li>
+          <li>Chemistry II</li>
+          <li>Organic Chemistry</li>
+        </ul>
       </text>
     ),
   },
@@ -80,11 +87,13 @@ export const subjectsData = [
     title: "Mathematics",
     subject: (
       <text>
-        Calculus
-        <br /> Linear Algebra
-        <br /> Differential Equations
-        <br /> Numerical Methods
-        <br /> Discrete Mathematics
+        <ul>
+          <li>Calculus</li>
+          <li>Linear Algebra</li>
+          <li>Differential Equations</li>
+          <li>Numerical Methods</li>
+          <li>Discrete Mathematics</li>
+        </ul>
       </text>
     ),
   },
@@ -93,61 +102,16 @@ export const subjectsData = [
     title: "Chemical Engineering",
     subject: (
       <text>
-        Chemical Processes
-        <br /> Chemical Reaction Engineering
-        <br /> Chemical Thermodynamics
-        <br /> Fluid and Particle Mechanics
-        <br /> Mass and Heat Transfer
-        <br />
-        Plant Design Economics
-        <br /> Separation Processes
-        <br /> Transport Phenomena
-      </text>
-    ),
-  },
-  {
-    img: other,
-    title: "Other Subject",
-    subject: (
-      <text>
-        Biology
-        <br /> Solidworks
-        <br /> Matlab
-        <br /> Autocad
-        <br /> C<br /> C++
-        <br /> Lab Report or Projects
-        <br /> Essay Writing
-      </text>
-    ),
-  },
-  {
-    img: statistics,
-    title: "Statistics and Probability",
-    subject: (
-      <text>
-        Business Statistics
-        <br /> Elementary Statistics
-        <br /> Probability
-      </text>
-    ),
-  },
-  {
-    img: civil,
-    title: "Civil Engineering",
-    subject: (
-      <text>
-        Construction Project Management
-        <br /> Environmental Engineering
-        <br /> Foundation Design
-        <br /> Geotechnical Engineering
-        <br /> Hydraulic Engineering
-        <br /> Mechanics of Materials
-        <br /> Reinforced Cement Concrete
-        <br /> Structural Analysis
-        <br /> Surveying
-        <br />
-        Transportation and Highway Engineering
-        <br /> Water Resources Engineering
+        <ul>
+          <li>Chemical Processes</li>
+          <li>Chemical Reaction Engineering</li>
+          <li>Chemical Thermodynamics</li>
+          <li>Fluid and Particle Mechanics</li>
+          <li>Mass and Heat Transfer</li>
+          <li>Plant Design Economics</li>
+          <li>Separation Processes</li>
+          <li>Transport Phenomena</li>
+        </ul>
       </text>
     ),
   },
@@ -156,10 +120,64 @@ export const subjectsData = [
     title: "Economics",
     subject: (
       <text>
-        Finance
-        <br /> Economics
-        <br /> Accounting
-        <br /> Operations Management
+        <ul>
+          <li>Finance</li>
+          <li>Economics</li>
+          <li>Accounting</li>
+          <li>Operations Management</li>
+        </ul>
+      </text>
+    ),
+  },
+  {
+    img: statistics,
+    title: "Statistics and Probability",
+    subject: (
+      <text>
+        <ul>
+          <li>Business Statistics</li>
+          <li>Elementary Statistics</li>
+          <li>Probability</li>
+        </ul>
+      </text>
+    ),
+  },
+  {
+    img: civil,
+    title: "Civil Engineering",
+    subject: (
+      <text>
+        <ul>
+          <li>Construction Project Management</li>
+          <li>Environmental Engineering</li>
+          <li>Foundation Design</li>
+          <li>Geotechnical Engineering</li>
+          <li>Hydraulic Engineering</li>
+          <li>Mechanics of Materials</li>
+          <li>Reinforced Cement Concrete</li>
+          <li>Structural Analysis</li>
+          <li>Surveying</li>
+          <li>Transportation and Highway Engineering</li>
+          <li>Water Resources Engineering</li>
+        </ul>
+      </text>
+    ),
+  },
+  {
+    img: other,
+    title: "Other Subject",
+    subject: (
+      <text>
+        <ul>
+          <li>Biology</li>
+          <li>Solidworks</li>
+          <li>Matlab</li>
+          <li>Autocad</li>
+          <li>C</li>
+          <li>C++</li>
+          <li>Lab Report or Projects</li>
+          <li>Essay Writing</li>
+        </ul>
       </text>
     ),
   },
