@@ -5,6 +5,7 @@ import { Link } from 'react-router-dom'
 type SubjectCardProps = {
   img: string
   title: string
+  subject:any
 }
 export default function SubjectCard(props: SubjectCardProps) {
   const { img, title } = props

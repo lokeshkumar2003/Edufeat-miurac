@@ -79,15 +79,20 @@ export default function Footer() {
                       <AiOutlineMail size={20} />
                       Email:support@edufeat.com
                     </div>
+                    {pathname !== '/' && 
                     
                     <div className="">
                       <div className="text-white">Drop your CV: </div>
                       <div className="text-white">tutorhr@edufeat.com</div>
                     </div>
+                    }
+                    {pathname !== '/' && 
+                    
                     <div className="flex gap-2 text-white ">
                         <IoCallOutline size={20} />
                       Phone: +91-8240014127
                     </div>
+                    }
                   </div>
                   
                   <div className="flex justify-center md:justify-start pt-8 md:pt-0 ">

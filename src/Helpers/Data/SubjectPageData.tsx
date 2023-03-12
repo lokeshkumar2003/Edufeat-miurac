@@ -5,7 +5,9 @@ import chem from "../../Assets/subjectChemistry.svg";
 import math from "../../Assets/subjectMath.svg";
 import cheEng from "../../Assets/subjectChemicalEng.svg";
 import other from "../../Assets/subjectOther.svg";
-
+import civil from "../../Assets/civil.svg";
+import statistics from "../../Assets/statistics.svg"
+import economics from "../../Assets/economics.svg";
 export const SubjectPageData = [
   {
     img: mecEng,
@@ -42,7 +44,7 @@ export const SubjectPageData = [
     // ),
   },
   {
-    img:other,
+    img:civil,
     title:'Civil Engineering',
     subjectContent:[
       {name:'Construction Project Management'},
@@ -123,7 +125,7 @@ export const SubjectPageData = [
     ],
   },
   {
-    img:other,
+    img:statistics,
     title:'Statistics and Probability',
     subjectContent:[
       {name:'Business Statistics'},
@@ -132,7 +134,7 @@ export const SubjectPageData = [
     ]
   },
   {
-    img:other,
+    img:economics,
     title:'Economics',
     subjectContent:[
       {name:'Finance'},
